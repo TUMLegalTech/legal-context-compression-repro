@@ -54,7 +54,7 @@ scores nor rankings establish no-loss, non-inferiority or retained-context groun
 ## Billing and recovery
 
 The sole credential is OPENROUTER_API_KEY, from the environment or the contracted
-workspace's ignored `.env`. Each request reserves a conservative
+workspace's ignored `.env` or `openrouter_key.txt`. Each request reserves a conservative
 cost from UTF-8 input size, a wrapper allowance, the completion-token ceiling,
 and fixed per-million-token price ceilings. Failed/uncertain requests keep their
 reservation. This deliberately stops early rather than relying on missing usage

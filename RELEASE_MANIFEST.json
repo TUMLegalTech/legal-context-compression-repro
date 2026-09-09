@@ -1,5 +1,5 @@
 {
-  "file_count": 105,
+  "file_count": 107,
   "files": {
     ".env.example": {
       "bytes": 20,
@@ -14,48 +14,56 @@
       "sha256": "e8c97f679dc4e4875ed402207661540ef2c96dcd65725817fb37bd341489f139"
     },
     ".gitignore": {
-      "bytes": 157,
-      "sha256": "1577ac897971d5d21becb86b6ae2ef1ec283a50b7e27efffd18c487f79f25bf0"
+      "bytes": 173,
+      "sha256": "10b6be9f5459903a78e0a020fd455364d5a975956683d7cb86d2b580dc6a6dbc"
     },
     ".python-version": {
       "bytes": 5,
       "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
     },
     "AGENTS.md": {
-      "bytes": 1022,
-      "sha256": "7e5b799c799bff3118eb07661fd28feabee7fb7ed6b61b238f0912cf30965f7c"
+      "bytes": 1173,
+      "sha256": "24764cbf4804ab885a867d9d1473cc817180c9420f0dfad2ab1ffe09b85244dc"
     },
     "CITATION.cff": {
-      "bytes": 451,
-      "sha256": "5f1ea83c9b5aaf8fbcca7098e9d4ff618f081854c3705c039dfe277b39041dce"
+      "bytes": 454,
+      "sha256": "51c692b0a7d20c7d79e40a6316f7a73edcb10eeef36be5d617764c2de6104848"
     },
     "README.md": {
-      "bytes": 7378,
-      "sha256": "1779a69d9f34d28a183fa334ec4abc0d56f9e4abf2d518f9c2fb49790b8f834a"
+      "bytes": 7901,
+      "sha256": "3a049c59145810ce0bb3233c86638a8f937972f2158f6970ab0710af7797f47a"
     },
     "THIRD_PARTY_NOTICES.md": {
-      "bytes": 1602,
-      "sha256": "69861b6f0e38330a90978e4e46aecc977e032f346ea82b64ed830736319d560d"
+      "bytes": 1678,
+      "sha256": "b24a2ee9afe79f74b8f1e382491e82d2f80269515b6c5f2b06367d8d1d205bae"
     },
     "contracts/README.md": {
-      "bytes": 718,
-      "sha256": "75f9a5b6fdd30fb6488cc9fc9188d08697a9fa1af9a642aa4633c51363d22ab3"
+      "bytes": 1173,
+      "sha256": "729177d1ae7aa0de137a0405c500ab60fa2bb5a8fb0e0305a22893b72cc63950"
     },
     "docs/IMPLEMENTATION.md": {
       "bytes": 2938,
       "sha256": "1988fb10facad049aac872216afad90cef152d306694d4c3b554c9713a46bdcd"
     },
     "docs/PROTOCOL.md": {
-      "bytes": 3975,
-      "sha256": "a464c3751ad6e4234f98871413a9287476d0f36a66b18cd762cb5a2aaba6cd06"
+      "bytes": 3999,
+      "sha256": "99ee2604335548fc629de82c9296647a0e4aac2827b366759516567c2df2ba3b"
+    },
+    "docs/SMOKE_TEST.md": {
+      "bytes": 2610,
+      "sha256": "d7c1f3b0eba149f49c4de69159c0823341a5eef5a3584c1df5b25d74c3386b22"
     },
     "docs/VALIDATION.md": {
-      "bytes": 3443,
-      "sha256": "80da9f21ce8b6d16b189f08dc00d60b849ffa986d45fa68fbe418a8db65b116d"
+      "bytes": 4192,
+      "sha256": "fc57b8893faf1b1d7a811c710f81616e7c1c0787f9834a0fc765ee876fdab4a1"
+    },
+    "docs/smoke_validation.json": {
+      "bytes": 6438,
+      "sha256": "b5c781183b29fd9ff56934569bcbe5fc64032ca7a006de485eba0a1ac4127b6d"
     },
     "docs/validation.json": {
-      "bytes": 3431,
-      "sha256": "90090c6f4627463bb88d5a351a15beb0efe04852f1dde4b582052102614ccab1"
+      "bytes": 3488,
+      "sha256": "0545e512ccd0c71b116317df12ba7ce61fbd40e85505414e88f6cf0195d1729e"
     },
     "figures/README.md": {
       "bytes": 3540,
@@ -150,8 +158,8 @@
       "sha256": "0e8936bcb1d18404603aac51b78ad1609db3c96b2b4d483d1948c49cc3460383"
     },
     "scripts/package_release.py": {
-      "bytes": 3565,
-      "sha256": "07cee34dbed0db6a4f640482bc289aa03fb8ce48229501ba0139e1690ec1c344"
+      "bytes": 3559,
+      "sha256": "0224a9cfd900e2bc60d08ead12a40864a565a50a106a5e9bee6c3a305f6ce18c"
     },
     "scripts/port_source.py": {
       "bytes": 4718,
@@ -298,8 +306,8 @@
       "sha256": "5b41f7c4d9d00e59c0db4692d00907b7ca1465311dcafa902e089e2da0126144"
     },
     "src/legal_repro/contracts.py": {
-      "bytes": 3953,
-      "sha256": "489d72488539ca27a0fea67e0d6eeeaaa8788f7f69219295c4ce1eb9be370c10"
+      "bytes": 3983,
+      "sha256": "54258a6f5a194b3b820fecd2ab69e2bc954b74ced22795eea3ff07174e1a41f4"
     },
     "src/legal_repro/expert_agreement.py": {
       "bytes": 11782,
@@ -350,8 +358,8 @@
       "sha256": "b39d9ba8c5152cec419db626380c5b1db224eb7e616cbb99def12cbe598a0839"
     },
     "src/legal_repro/runner.py": {
-      "bytes": 17943,
-      "sha256": "4a30436c0c89a413dfa92f3f916628d72c4a6e58189216ece6dca6c2161764b8"
+      "bytes": 18310,
+      "sha256": "35fc31ccbf17d6857a0aef2f52db512b126db670a4dde09faf2740ef215932c8"
     },
     "src/legal_repro/schemas.py": {
       "bytes": 5755,
@@ -394,8 +402,8 @@
       "sha256": "474d0b7ef42815f72036daf14872a42fe551d6066067391783f251d14f615d92"
     },
     "tests/test_credentials.py": {
-      "bytes": 808,
-      "sha256": "b43768f34ae71c97a75755d350301b3b0befffa62a68e8877a0a1a953dad28b1"
+      "bytes": 807,
+      "sha256": "b5f9229982083f2a959fa30dd75c07c5151b97d9ea5f0ac86d0d7bf560cc99f6"
     },
     "tests/test_expert_agreement.py": {
       "bytes": 8634,
@@ -406,12 +414,12 @@
       "sha256": "788ea203e4a62a9e3ddd6eb4bf5ca7a1f18a00e818b4c16d69fd829c6720aaf9"
     },
     "tests/test_hosted_runner.py": {
-      "bytes": 10059,
-      "sha256": "b5364fb56a8f6ff36a3c652f9bb98718ae0a793bb5339e4f04158b98c30c3a31"
+      "bytes": 12302,
+      "sha256": "99aa7ffadf5bd5569137f6cc3b25b8d68da835c05b2ccb1091db6cd9849db9c6"
     },
     "tests/test_portable_release.py": {
-      "bytes": 4689,
-      "sha256": "60157e84cfb49857648fb47085265300c73af14842e3d99559beba9fef49c7c7"
+      "bytes": 5441,
+      "sha256": "9ee12b1dbf7d1231c9ca7445c203d66bf1639c8e014e52fe45f64fbcb321de49"
     },
     "tests/test_review_bundle.py": {
       "bytes": 10943,
@@ -422,8 +430,8 @@
       "sha256": "0040205f92240962670ca00130e154f62bfd123501926d2d43e83a208ca79ac9"
     }
   },
-  "intended_remote": "https://github.com/mpriorust/legal-context-compression-repro.git",
+  "intended_remote": "https://github.com/TUMLegalTech/legal-context-compression-repro.git",
   "schema_version": 1,
-  "total_bytes": 16735431,
-  "visibility": "private"
+  "total_bytes": 16749918,
+  "visibility": "public"
 }

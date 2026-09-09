@@ -1,12 +1,25 @@
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 
 import pytest
 
 from legal_repro import bundle
 from legal_repro.planning import messages, plan
 from legal_repro.verification import verify
+
+
+def test_local_credentials_are_excluded_from_git():
+    root=Path(__file__).resolve().parents[1]
+    paths=['openrouter_key.txt','openrouter_key-backup.txt','openrouter_key.txt.bak','.env','.env.local',
+           'contracts/local-smoke-test.txt','outputs/smoke-test/manifest.json']
+    result=subprocess.run(['git','check-ignore','--no-index','--stdin'],cwd=root,
+                          input='\n'.join(paths)+'\n',text=True,capture_output=True,check=True)
+    assert result.stdout.splitlines()==paths
+    tracked=subprocess.run(['git','ls-files','--','openrouter_key*','.env','.env.*'],
+                           cwd=root,text=True,capture_output=True,check=True)
+    assert set(tracked.stdout.splitlines())<={'.env.example'}
 
 
 def test_full_reference_reconstruction_and_negative_compression_evidence():

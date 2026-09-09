@@ -19,6 +19,7 @@ Matplotlib supplies the STIXGeneral font used in generated figures. Python and
 Node dependencies retain their respective upstream licenses. Publisher LaTeX
 classes, bibliography styles and unrelated paper assets are not included.
 
-No new blanket open-source or public redistribution license is assigned to the
-original research code or machine-generated evidence by this private export.
-Keep this repository private unless its owner separately reviews public release.
+The owner authorized public publication in the TUMLegalTech GitHub organization
+on 9 September 2026. This publication does not assign a new blanket open-source
+license to the original research code or machine-generated evidence. Existing
+component-specific licenses and attribution requirements remain unchanged.

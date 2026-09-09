@@ -23,17 +23,22 @@ def api_key(contract):
     value=os.environ.get(contract['API_KEY_ENV'],'')
     if value:
         return value
-    path=Path(contract['WORKSPACE'])/'.env'
-    if not path.exists():
-        raise ValueError('Set OPENROUTER_API_KEY or add its single assignment to this workspace .env')
+    workspace=Path(contract['WORKSPACE'])
+    path=workspace/'.env'
+    if not path.exists() and not path.is_symlink():
+        path=workspace/'openrouter_key.txt'
     if path.is_symlink():
         raise PermissionError('The key file must not be a symlink')
+    if not path.is_file():
+        raise ValueError('Set OPENROUTER_API_KEY, use this workspace .env, or put the key in openrouter_key.txt')
     lines=[line.strip() for line in path.read_text().splitlines() if line.strip() and not line.lstrip().startswith('#')]
-    if len(lines)!=1 or not lines[0].startswith('OPENROUTER_API_KEY='):
-        raise ValueError('The local .env must contain only OPENROUTER_API_KEY=<value>')
-    value=lines[0].partition('=')[2]
+    if len(lines)!=1 or (path.name=='.env' and not lines[0].startswith('OPENROUTER_API_KEY=')):
+        raise ValueError('Use one key in openrouter_key.txt or one OPENROUTER_API_KEY=<value> assignment in .env')
+    value=lines[0].partition('=')[2] if lines[0].startswith('OPENROUTER_API_KEY=') else lines[0]
     if len(value)>=2 and value[0]==value[-1] and value[0] in ('"',"'"):
         value=value[1:-1]
+    if not value or any(c.isspace() for c in value):
+        raise ValueError('OPENROUTER_API_KEY is missing or malformed')
     return value
 
 

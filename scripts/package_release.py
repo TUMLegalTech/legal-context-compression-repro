@@ -1,4 +1,4 @@
-"""Allowlisted, manifest-bound private release archive. No credentials or remote actions."""
+"""Allowlisted, manifest-bound release archive. No credentials or remote actions."""
 import argparse
 import hashlib
 import json
@@ -34,8 +34,8 @@ for path in sorted(set(paths)):
         if re.search(rb'(?:sk-or-v1-[A-Za-z0-9]{20,}|gh[pousr]_[A-Za-z0-9]{30,}|-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----)',data):
             raise PermissionError('Possible credential found in release path '+name)
     files[name]={'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()}
-manifest={'schema_version':1,'intended_remote':'https://github.com/mpriorust/legal-context-compression-repro.git',
-          'visibility':'private','files':files,'file_count':len(files),'total_bytes':sum(f['bytes'] for f in files.values())}
+manifest={'schema_version':1,'intended_remote':'https://github.com/TUMLegalTech/legal-context-compression-repro.git',
+          'visibility':'public','files':files,'file_count':len(files),'total_bytes':sum(f['bytes'] for f in files.values())}
 manifest_path=ROOT/'RELEASE_MANIFEST.json'
 if manifest_path.exists():
     if not args.refresh_manifest:

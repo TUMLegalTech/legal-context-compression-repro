@@ -67,6 +67,55 @@ def test_active_contract_is_required_before_any_credential_or_transport(monkeypa
         run(path,backend=Fake(),tokenizer=Tokenizer())
 
 
+@pytest.mark.parametrize('content',('fixture-key\n','OPENROUTER_API_KEY="fixture-key"\n'))
+def test_local_key_file_is_loaded_only_after_contract_validation(monkeypatch,tmp_path,content):
+    from legal_repro import runner
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.delenv('OPENROUTER_API_KEY',raising=False)
+    path=tmp_path/'draft.txt'
+    contracts.draft(path,tmp_path/'run')
+    key_path=tmp_path/'openrouter_key.txt'
+    key_path.write_text(content)
+    original=Path.read_text
+    reads=[]
+    def record_read(path,*args,**kwargs):
+        if path==key_path:
+            reads.append(path)
+        return original(path,*args,**kwargs)
+    monkeypatch.setattr(Path,'read_text',record_read)
+    with pytest.raises(PermissionError,match='ACTIVE'):
+        run(path)
+    assert reads==[]
+    path.write_text(path.read_text().replace('STATUS: DRAFT','STATUS: ACTIVE'))
+    assert runner.api_key(contracts.load(path,'smoke'))=='fixture-key'
+    assert reads==[key_path]
+
+
+def test_credential_precedence_and_rejection_do_not_expose_key(monkeypatch,tmp_path):
+    from legal_repro.runner import api_key
+    monkeypatch.delenv('OPENROUTER_API_KEY',raising=False)
+    contract={'WORKSPACE':str(tmp_path),'API_KEY_ENV':'OPENROUTER_API_KEY'}
+    (tmp_path/'openrouter_key.txt').write_text('file-fixture')
+    (tmp_path/'.env').write_text('OPENROUTER_API_KEY=env-file-fixture')
+    assert api_key(contract)=='env-file-fixture'
+    monkeypatch.setenv('OPENROUTER_API_KEY','environment-fixture')
+    assert api_key(contract)=='environment-fixture'
+    monkeypatch.delenv('OPENROUTER_API_KEY')
+    (tmp_path/'.env').write_text('secret-fixture-on-malformed-line')
+    with pytest.raises(ValueError) as caught:
+        api_key(contract)
+    assert 'secret-fixture' not in str(caught.value)
+
+
+@pytest.mark.parametrize('filename',('.env','openrouter_key.txt'))
+def test_key_file_symlinks_are_rejected_without_reading(monkeypatch,tmp_path,filename):
+    from legal_repro.runner import api_key
+    monkeypatch.delenv('OPENROUTER_API_KEY',raising=False)
+    (tmp_path/filename).symlink_to(tmp_path/'missing-secret')
+    with pytest.raises(PermissionError,match='symlink'):
+        api_key({'WORKSPACE':str(tmp_path),'API_KEY_ENV':'OPENROUTER_API_KEY'})
+
+
 def test_complete_smoke_uses_only_fresh_answers_and_resume_makes_no_calls(monkeypatch,tmp_path):
     path=active_contract(monkeypatch,tmp_path)
     client=Fake()

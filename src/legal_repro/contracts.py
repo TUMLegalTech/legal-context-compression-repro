@@ -27,7 +27,7 @@ def draft(path: Path, output: Path, mode='smoke', max_usd=1.0, max_requests=64, 
         if mode=='publish':
             stream.write('# Credential scope: existing local gh GitHub login; create/push only this private repository.\n')
         else:
-            stream.write('# Credential scope: OPENROUTER_API_KEY from the environment or WORKSPACE/.env only.\n')
+            stream.write('# Credential scope: OPENROUTER_API_KEY from the environment, WORKSPACE/.env or WORKSPACE/openrouter_key.txt only.\n')
             stream.write('# Upload selected QA prompts; no local model serving or GPU access.\n')
         stream.writelines(f'{key}: {value}\n' for key,value in fields.items())
     return {'contract':str(path.resolve()), **fields}

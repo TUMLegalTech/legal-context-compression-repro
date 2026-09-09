@@ -13,5 +13,5 @@ def test_exact_ignored_key_file_and_environment_precedence(monkeypatch,tmp_path)
     assert api_key(contract)=='synthetic-environment-key'
     monkeypatch.delenv('OPENROUTER_API_KEY')
     (tmp_path/'.env').write_text('UNRELATED=value\n')
-    with pytest.raises(ValueError,match='only OPENROUTER_API_KEY'):
+    with pytest.raises(ValueError,match='one OPENROUTER_API_KEY'):
         api_key(contract)

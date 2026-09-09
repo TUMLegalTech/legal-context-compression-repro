@@ -44,11 +44,20 @@ The release was published to the private
 repository on 9 September 2026. A fresh GitHub clone verified the bundled evidence,
 and [GitHub's offline workflow](https://github.com/mpriorust/legal-context-compression-repro/actions/runs/34337251444)
 passed for the initial code release, `078c36dd269237fc0f313b41e52fbfd199b66b7c`.
-Publication details are recorded in `validation.json`.
+Publication details are recorded in `validation.json`. The owner subsequently
+authorized the public organization repository
+[`TUMLegalTech/legal-context-compression-repro`](https://github.com/TUMLegalTech/legal-context-compression-repro).
+The initial private-publication record is retained as historical validation.
 
-The approved 18-call live OpenRouter check is waiting for `OPENROUTER_API_KEY`.
-No paid requests have been made. API availability listings are not a substitute
-for a paid model test.
+The subsequent [live OpenRouter smoke check](SMOKE_TEST.md) completed on
+9 September 2026: 18 requests, no retries, and $0.015073965 in reported API cost.
+The updated offline suite passed 125 tests. All request costs were reported;
+the conservative reservation total was $0.0806643 under a $1 contract cap.
+Completed-run validation passed with both network and credential reads blocked.
+The updated wheel verified its bundled evidence in an isolated environment with
+source-checkout and network access blocked. These checks establish working
+hosted inference and valid outputs; they do not establish population-level
+quality or equivalence to the original local runtime.
 
 Source recheck: all 70 remaining allowlisted source files still match their export
 hashes. The two original participant ZIP paths disappeared from the source

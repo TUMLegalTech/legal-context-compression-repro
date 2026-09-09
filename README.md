@@ -37,8 +37,10 @@ rows expand under downstream retokenization; they remain included as recorded.
 
 Use a funded **`OPENROUTER_API_KEY`**, set locally in your shell or secret manager.
 Alternatively, put the single assignment `OPENROUTER_API_KEY=your-key` in the
-Git-ignored `.env` in this checkout. This file is read only after an active contract
-is validated; keep its filesystem permissions private.
+Git-ignored `.env` in this checkout, or put the key alone in the Git-ignored
+`openrouter_key.txt`. Resolution order is environment, `.env`, then
+`openrouter_key.txt`. These files are read only after an active contract is
+validated; keep their filesystem permissions private.
 It is read only by the Python API runner and is never embedded in the offline
 apps. A key spending limit of $1 also provides a provider-side billing ceiling.
 
@@ -78,6 +80,10 @@ This small check establishes working inference and valid evaluation output.
 It cannot establish matching population scores, preservation of legal quality,
 or equivalence to the original local runtime. Test fixtures are explicitly
 labeled `synthetic_transport_test` and never count as a live API verification.
+
+The [9 September 2026 live smoke check](docs/SMOKE_TEST.md) completed all 18
+requests without retries, with $0.015073965 in reported API cost. The accompanying
+offline suite passed 125 tests.
 
 ## Run the complete hosted evaluation
 
@@ -141,5 +147,7 @@ JavaScript dependencies. CI runs offline evidence and synthetic transport tests;
 it never reads an API key or runs models.
 
 See [release validation](docs/VALIDATION.md), [implementation provenance](docs/IMPLEMENTATION.md),
-and [third-party notices](THIRD_PARTY_NOTICES.md). The GitHub repository remains
-private; this is not a public redistribution license for all bundled material.
+and [third-party notices](THIRD_PARTY_NOTICES.md). The public repository is
+[`TUMLegalTech/legal-context-compression-repro`](https://github.com/TUMLegalTech/legal-context-compression-repro).
+Public availability does not assign a blanket open-source license to all bundled
+material; the component-specific rights and attribution notices remain applicable.
