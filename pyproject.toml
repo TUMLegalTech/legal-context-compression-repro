@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "legal-context-compression-repro"
+version = "0.1.0"
+description = "Frozen-evidence reconstruction and one-key hosted replication of German legal context compression"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy==2.2.6", "matplotlib==3.10.0", "tokenizers==0.22.2"]
+
+[project.scripts]
+legal-repro = "legal_repro.cli:main"
+
+[dependency-groups]
+dev = ["pytest==8.3.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+legal_repro = ["assets/**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+addopts = "-ra"

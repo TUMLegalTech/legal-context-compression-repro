@@ -1,0 +1,109 @@
+{
+  "files": {
+    "data/inputs.json.gz": {
+      "bytes": 2319995,
+      "sha256": "9dc7f113e5e201e30e06f51d8537115cd7d424601e7b0fab252f3485c1794060"
+    },
+    "data/reference_results.json.gz": {
+      "bytes": 11544117,
+      "sha256": "07374ffa46f691de4ecebf332f25eddf20033c7f3b96a9e8a33d037e05a45eff"
+    },
+    "paper/MANIFEST.json": {
+      "bytes": 2339,
+      "sha256": "8cb3810823bbeb165025f8b4f543a89ede08d9c24d37c161a3364618cd658a31"
+    },
+    "paper/evidence/all_180_contrasts.csv": {
+      "bytes": 49238,
+      "sha256": "0feb56c01c42e96f4fdc1e4f1e50b60520ecbc4debc947a8cbde718b56d68e65"
+    },
+    "paper/evidence/condition_means.csv": {
+      "bytes": 2635,
+      "sha256": "28068a5cf293df59f880ca47611eb5c6c218098974d11c08438a68b1e0bcf822"
+    },
+    "paper/evidence/ranking_summary.json": {
+      "bytes": 17932,
+      "sha256": "e85623046fab410650f9a6b87fbe324c7fad17abf97d708b41e2a4e36dbf2971"
+    },
+    "prompts/qa_user.txt": {
+      "bytes": 1092,
+      "sha256": "d17ab9e8710e027f8c2f21603d9627f993ade1eb5296ccb611bd58673628ba96"
+    },
+    "prompts/rank_developer.txt": {
+      "bytes": 1071,
+      "sha256": "33069a3044a0ee1f7ecf2b39ac5299c548213acb244ffc6a939a5b48d8a89e56"
+    },
+    "prompts/rank_user.txt": {
+      "bytes": 121,
+      "sha256": "580a2b0f5ef383ad892c291ce7e20791cbcbafb615af8605d8f24259a1fcb3e2"
+    },
+    "prompts/score_developer.txt": {
+      "bytes": 1127,
+      "sha256": "45d36a648ac9d6dac69867a8087503b5acf5d1b88cf576ca498f058fd27d3248"
+    },
+    "prompts/score_user.txt": {
+      "bytes": 97,
+      "sha256": "b3b6f0ad95e555da676da8a120ed883bdc5b78d4983a10a807abec9cca277c5c"
+    },
+    "protocol.json": {
+      "bytes": 2446,
+      "sha256": "2a4ba31ad9b5df56f95447f4e80d6ca6d3be53292c95c998fe9c99cb5e4badcb"
+    },
+    "provenance.json": {
+      "bytes": 19764,
+      "sha256": "1b1010e68663fbc87085f103989eac7c0b4e7b720f2c038f625b247b1479d303"
+    },
+    "ui/expert/DUAL_STUDY.md": {
+      "bytes": 4289,
+      "sha256": "a47e5dcdc9645c14731cabac96aa5202bb2af5fd124a1d5866293a73c1ae00d0"
+    },
+    "ui/expert/agreement.js": {
+      "bytes": 8882,
+      "sha256": "7903f9d26249f457336537d08e01c321aea4db09950e0a78b97dcbb687eadbe1"
+    },
+    "ui/expert/app.js": {
+      "bytes": 23475,
+      "sha256": "719dca49efed94b3ebd55888b7ab768c1627756b881a0e8e329f4df151c233b7"
+    },
+    "ui/expert/index.html": {
+      "bytes": 7230,
+      "sha256": "8dda3a5b88b60141a197931b1269f79b831438bc7ba26e981a77dd48430613b8"
+    },
+    "ui/expert/organizer.html": {
+      "bytes": 2035,
+      "sha256": "aef888ffaa9a22bf0af1025be5351cf814756ecc236af1488790cac6c24caf0b"
+    },
+    "ui/expert/organizer.js": {
+      "bytes": 9861,
+      "sha256": "0b0fd69602fda85bf19498b8dad2fd1d2a77b36eb615cd66d97c5cb4664ad4c4"
+    },
+    "ui/expert/pairwise.css": {
+      "bytes": 4428,
+      "sha256": "7451b1a1b8e54fe4a5e6426abeff3bf7ce3d08b346a70ba16d1b082f0fcbd1ac"
+    },
+    "ui/expert/pairwise.html": {
+      "bytes": 3840,
+      "sha256": "8158c340030d14aa5dea1ef2a9bf8e51992049a05328a0990956aa43dcaf00b2"
+    },
+    "ui/expert/pairwise.js": {
+      "bytes": 15366,
+      "sha256": "3b4d0d8a90974065d4f15486bfabc781926e3acb2a2afe2d86e8ba98d87ea9fe"
+    },
+    "ui/expert/styles.css": {
+      "bytes": 7203,
+      "sha256": "46b80ba0a6184f345fc6999dc7547f8a81a0c99b247814a6e9ce7a82866d6f3b"
+    },
+    "ui/review/app.js": {
+      "bytes": 15343,
+      "sha256": "a780c45fb812294525cf832f1c2b9c323a864e571970d66df9e7b2b774f99cb4"
+    },
+    "ui/review/index.html": {
+      "bytes": 4098,
+      "sha256": "e9de9363137379e586c526d290ba51db1bdd6c791a608ad75b0adebf013f4ec3"
+    },
+    "ui/review/styles.css": {
+      "bytes": 8306,
+      "sha256": "2783fcd105d089ecba3e1bab892e08bac0f43a5fed45f0ea50002dedd830af57"
+    }
+  },
+  "schema_version": 1
+}

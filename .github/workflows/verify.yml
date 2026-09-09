@@ -1,0 +1,26 @@
+name: Verify offline reproduction
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    env:
+      CUDA_VISIBLE_DEVICES: ""
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.9.0"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: uv sync --frozen
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: uv run --frozen pytest -q
+      - run: uv run --frozen legal-repro verify --receipt outputs/verification.json
+      - run: uv run --frozen legal-repro figures --output outputs/figures
+      - run: uv run --frozen legal-repro evaluate --dry-run
+      - run: uv build --wheel --out-dir outputs/wheel

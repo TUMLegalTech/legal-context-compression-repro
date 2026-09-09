@@ -1,0 +1,126 @@
+{
+  "accepted": true,
+  "created_at": "2026-09-07T18:06:31.575764+00:00",
+  "plot_names": [
+    "outcome_correctness",
+    "legal_reasoning_correctness",
+    "legal_basis_correctness",
+    "ranking_comparisons"
+  ],
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "source_manifest_sha256": "8cb3810823bbeb165025f8b4f543a89ede08d9c24d37c161a3364618cd658a31",
+  "source_sha256": {
+    "evidence/condition_means.csv": "28068a5cf293df59f880ca47611eb5c6c218098974d11c08438a68b1e0bcf822",
+    "evidence/all_180_contrasts.csv": "0feb56c01c42e96f4fdc1e4f1e50b60520ecbc4debc947a8cbde718b56d68e65",
+    "evidence/ranking_summary.json": "e85623046fab410650f9a6b87fbe324c7fad17abf97d708b41e2a4e36dbf2971"
+  },
+  "scripts_sha256": {
+    "build_figures.py": "8db666137f48cc347faf14a53342b877676d0163841aa7147c729219180677c2",
+    "figure_style.py": "5bbf8d5faa940ff92119243e3c301119af00908d24e48fe3c50d74eb684b0697",
+    "plot_score_dimensions.py": "75d64d2a48c03cd478bf8caa3ee6c0d66252a41b159d0b7e76a4b5686a9ab7eb",
+    "plot_rankings.py": "daae3b81f017caa2dcbd2400ecc78c305ea880da79f2a66be47c45994b342ba7"
+  },
+  "font_family": "STIXGeneral",
+  "font_file": "STIXGeneral.ttf",
+  "font_sha256": "167378031e2dddc6216d67819c9260e9a06ffc4c478e4e23cb98a6fd44b183c2",
+  "font_weight": "normal",
+  "palette": {
+    "purple": "#440154",
+    "blue": "#31688e",
+    "teal": "#21918c",
+    "green": "#35b779",
+    "yellow": "#fde725"
+  },
+  "title_drawn": false,
+  "requested_target_panel_labels_drawn": true,
+  "font_sizes_pt_by_plot": {
+    "outcome_correctness": {
+      "axis_labels": 19,
+      "ticks": 17,
+      "legends": 17,
+      "annotations": 17
+    },
+    "legal_reasoning_correctness": {
+      "axis_labels": 19,
+      "ticks": 17,
+      "legends": 17,
+      "annotations": 17
+    },
+    "legal_basis_correctness": {
+      "axis_labels": 19,
+      "ticks": 17,
+      "legends": 17,
+      "annotations": 17
+    },
+    "ranking_comparisons": {
+      "axis_labels": 15,
+      "ticks": 13,
+      "legends": 13,
+      "annotations": 13,
+      "ranking_panel_labels": 14
+    }
+  },
+  "ranking_colors": {
+    "below": "#440154",
+    "tied": "#31688e",
+    "above": "#35b779"
+  },
+  "svg_text_outlined": true,
+  "pdf_fonts_embedded": true,
+  "png_dpi": 300,
+  "python_version": "3.10.12",
+  "matplotlib_version": "3.10.0",
+  "numerical_points_verified": 45,
+  "reference_lines_verified": 6,
+  "ranking_bars_verified": 15,
+  "ranking_segments_verified": 45,
+  "target_marker_mapping": {
+    "1.10": "o",
+    "1.25": "s",
+    "2.00": "^"
+  },
+  "score_x_limits": [
+    1.0,
+    2.3
+  ],
+  "score_y_limits": {
+    "outcome_correctness": [
+      0.545,
+      0.635
+    ],
+    "legal_reasoning_correctness": [
+      0.4,
+      0.565
+    ],
+    "legal_basis_correctness": [
+      0.395,
+      0.635
+    ]
+  },
+  "font_and_text_bounds_checked": true,
+  "footer_drawn": false,
+  "source_evidence_modified": false,
+  "gpu_actions": false,
+  "output_sha256": {
+    "outcome_correctness.png": "f9c467abb38292b6db974ddf43a06d24c4a1d86b1c52722ffdd56bbd63f18cea",
+    "outcome_correctness.svg": "e2ce982d92bdf3844056899d4ad0495a539f7057ecc19d3783ded33080e94ac8",
+    "outcome_correctness.pdf": "fe80da8905dff01211f1934fa802b2118058a0441f255e7cb7d2d5ef8817516e",
+    "legal_reasoning_correctness.png": "aac747238c6c26c3a5fcdfc3ec9d24031dc3b1a176dfaa21f04f7c2023a15edd",
+    "legal_reasoning_correctness.svg": "a36ca07cdac0d901b6ec97f07ecb6b0c51d93ab32328e683d3d11d43a96cbcae",
+    "legal_reasoning_correctness.pdf": "791bdaa9ab823f17a3338245e55a96caed321bb058b3f7a3760b789643da7068",
+    "legal_basis_correctness.png": "22b5175e4fe6519e15ec2c91a5d1bffba1a76e2a99ea326134da42a3fea6cfd1",
+    "legal_basis_correctness.svg": "9202132f92c6fe4a09982e8ba8f8c2aa503f26f0142c3b3eccd2f2981dc246e8",
+    "legal_basis_correctness.pdf": "adbbf98fc8dcf6c2c0e45efa3118251aea9cb7d91085183fd3a3ac3410f9d229",
+    "ranking_comparisons.png": "b9ea073047c0ae5fa466210c6459dd6f613f677170e6aeca9ba4c77c4c267f56",
+    "ranking_comparisons.svg": "2ab237f5208a3564b6d80aa63d4a6a84bdb4d8e9ed61ef48089af77cd7045cdd",
+    "ranking_comparisons.pdf": "e391a18df2997fb7e071ef2409feca2da394ac62a5363d75d32984fa6d88fc23",
+    "data/score_values.csv": "3e44c473084e039a2938b0815345d858bce057b9b48ea233ab85879ab85c7ceb",
+    "data/reference_values.csv": "49225deb53f10c012d75b59a75e4900a7bbb820bcc6d078327911ac348fc2053",
+    "data/ranking_values.csv": "28b8ebb534ae1bd00f0f4dcae7910d5bea0b453d3d7ee3ea8a84f429f7d14bc5",
+    "README.md": "95de977ee68644ee071da527e951ecbcdd1ff72ac0e52473914b6257e121ed70"
+  }
+}

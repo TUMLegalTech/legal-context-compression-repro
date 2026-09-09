@@ -1,0 +1,58 @@
+:root { color-scheme:light; --ink:#26353d; --muted:#62717b; --blue:#3c6078; --border:#d5dfe5; }
+* { box-sizing:border-box; }
+[hidden] { display:none !important; }
+body { margin:0; background:#fafbfc; color:var(--ink); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+header,main { max-width:1380px; margin:auto; padding:24px 30px; }
+header { display:flex; justify-content:space-between; align-items:center; gap:20px; border-bottom:1px solid var(--border); }
+h1 { margin:0; font-size:25px; font-weight:600; }
+h2 { font-size:19px; font-weight:600; margin:0 0 14px; }
+h3 { margin:0 0 12px; font-size:18px; }
+p { margin:0 0 15px; }
+button,select,textarea,input { font:inherit; color:inherit; }
+button,select { background:white; border:1px solid #b5c5cf; border-radius:6px; padding:9px 15px; }
+button { cursor:pointer; }
+button:hover { background:#edf3f6; }
+button:disabled,select:disabled { cursor:default; opacity:.5; }
+.primary { background:var(--blue); color:white; border-color:var(--blue); }
+.primary:hover { background:#2f4f65; }
+:focus-visible { outline:3px solid #7dabc7; outline-offset:3px; }
+.files { display:flex; align-items:center; gap:16px; font-size:14px; flex-wrap:wrap; }
+.file-label { cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+.file-label input { position:absolute; width:1px; height:1px; opacity:0; }
+.file-label:focus-within { outline:3px solid #7dabc7; outline-offset:3px; }
+#study-info,.muted,footer { color:var(--muted); font-size:13px; }
+#study-info { margin:3px 0 0; }
+.progress-box>div { display:flex; justify-content:space-between; align-items:baseline; gap:15px; flex-wrap:wrap; font-size:14px; }
+#save-state { color:#336b51; font-size:13px; }
+progress { display:block; width:100%; height:7px; accent-color:var(--blue); margin:9px 0 20px; }
+.guide { max-width:1100px; font-size:14px; }
+nav { display:flex; align-items:center; gap:18px; margin:20px 0; font-size:14px; }
+#case-position { color:var(--muted); }
+.question { font:22px/1.6 Georgia,"Times New Roman",serif; margin:0 0 20px; }
+.reference { padding:17px 20px; border:1px solid var(--border); border-radius:7px; background:#eef3f6; margin-bottom:22px; }
+.reference h3 { font-size:15px; }
+.text { white-space:pre-wrap; overflow-wrap:anywhere; font:17px/1.75 Georgia,"Times New Roman",serif; }
+.reference .text { max-height:320px; overflow:auto; padding-right:10px; }
+.answers { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; gap:22px; }
+.answer { background:white; border:1px solid var(--border); border-radius:7px; padding:22px; min-width:0; }
+.answer h3 { padding-bottom:12px; border-bottom:1px solid var(--border); }
+.answer-text { max-height:620px; overflow:auto; padding-right:10px; }
+#assessment { margin-top:24px; padding:22px; background:white; border:1px solid var(--border); border-radius:7px; }
+.choices { display:flex; gap:12px; }
+.choices button { flex:1; padding:14px 12px; font-weight:500; font-size:17px; }
+.choices button[aria-pressed="true"] { color:white; background:var(--blue); border-color:var(--blue); }
+#selection { font-size:14px; margin:12px 0 17px; }
+summary { cursor:pointer; color:var(--muted); font-size:14px; }
+details[open] summary { margin-bottom:12px; }
+textarea { display:block; width:100%; border:1px solid #b5c5cf; border-radius:6px; padding:10px; resize:vertical; margin:6px 0 10px; }
+#extras>label { font-size:14px; }
+.check { display:flex; align-items:start; gap:8px; margin:12px 0; font-size:14px; }
+.check input { margin-top:6px; }
+.next-row { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-top:18px; }
+#next { min-width:135px; }
+.warning { border:1px solid #d2b177; background:#fff7e8; border-radius:6px; padding:13px 17px; margin-bottom:18px; font-size:14px; }
+#finished { padding:20px; margin-top:23px; border:1px solid #b7d0c0; border-radius:6px; background:#eef6f1; }
+#finished p { margin:0; }
+#notice { margin:15px 0 0; color:var(--blue); font-size:14px; }
+footer { margin-top:25px; border-top:1px solid var(--border); padding-top:15px; }
+@media(max-width:750px) { header { align-items:start; flex-direction:column; } header,main { padding:20px; } .answers { grid-template-columns:1fr; } .next-row { align-items:start; flex-direction:column; } .choices { gap:7px; } .choices button { font-size:15px; padding:12px 7px; } h1 { font-size:22px; } nav { gap:10px; flex-wrap:wrap; } }

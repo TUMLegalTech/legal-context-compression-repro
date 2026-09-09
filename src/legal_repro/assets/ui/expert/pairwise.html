@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-__REVIEW_JS_HASH__'; style-src 'sha256-__REVIEW_CSS_HASH__'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Juristischer Antwortvergleich</title>
+  <style>__REVIEW_CSS__</style>
+</head>
+<body>
+  <header>
+    <div><h1>Juristischer Antwortvergleich</h1><p id="study-info">Wird geladen …</p></div>
+    <div class="files"><button id="download" class="primary" type="button" disabled>Ergebnisse sichern</button><label class="file-label" for="import">Sicherung laden<input id="import" type="file" accept=".json,application/json" disabled></label></div>
+  </header>
+  <main>
+    <div id="error" class="warning" role="alert" hidden></div>
+    <div id="storage-warning" class="warning" role="alert" hidden></div>
+    <section class="progress-box" aria-label="Fortschritt">
+      <div><span id="progress" aria-live="polite">0 bearbeitet</span><span id="save-state" role="status">Noch keine Bewertung.</span></div>
+      <progress id="progress-bar" value="0" max="100"></progress>
+    </section>
+    <p class="guide">Frage und Referenz lesen. Welche Antwort stimmt <strong>rechtlich besser mit der Referenz überein</strong>? Ergebnis, Begründung und Rechtsgrundlagen zählen – nicht Stil oder Länge. Gleichstand ist erlaubt.</p>
+    <nav aria-label="Fallauswahl"><button id="previous" type="button" disabled>← Zurück</button><label for="jump">Frage <select id="jump" disabled></select></label><span id="case-position"></span></nav>
+    <article id="case" tabindex="-1"></article>
+    <section id="assessment" aria-labelledby="assessment-title" hidden>
+      <h2 id="assessment-title">Ihre Entscheidung</h2>
+      <div class="choices" role="group" aria-label="Antwortvergleich">
+        <button id="choose-A" type="button" aria-pressed="false">A besser</button>
+        <button id="choose-tie" type="button" aria-pressed="false">Gleichstand</button>
+        <button id="choose-B" type="button" aria-pressed="false">B besser</button>
+      </div>
+      <p id="selection" role="status">Noch nicht bewertet.</p>
+      <details id="extras"><summary>Anmerkung / nicht beurteilbar</summary>
+        <label for="notes">Anmerkung <span class="muted">(optional; bei Nichtbeurteilbarkeit bitte begründen)</span></label>
+        <textarea id="notes" rows="2" maxlength="10000"></textarea>
+        <label class="check"><input id="reference-issue" type="checkbox">Die Referenz erscheint fehlerhaft oder unvollständig.</label>
+        <button id="ungradable" type="button" disabled>Nicht beurteilbar speichern</button>
+      </details>
+      <div class="next-row"><span class="muted">Jeder Klick wird sofort gespeichert. Änderungen sind jederzeit möglich.</span><button id="next" class="primary" type="button" disabled>Weiter →</button></div>
+    </section>
+    <section id="finished" hidden><h2>Fertig – vielen Dank!</h2><p>Bitte oben <strong>Ergebnisse sichern</strong> anklicken und die heruntergeladene JSON-Datei zurücksenden. Es erfolgt kein automatischer Versand.</p></section>
+    <p id="notice" role="status" aria-live="polite"></p>
+    <footer>Vor jeder Pause <strong>Ergebnisse sichern</strong>. Zum Fortsetzen dieselbe HTML-Datei im selben Browser öffnen oder die letzte JSON-Sicherung laden. Nicht im privaten/Inkognito-Modus arbeiten. Die HTML- und ZIP-Dateien enthalten Ihre Bewertungen nicht.</footer>
+  </main>
+  <noscript>Bitte öffnen Sie diese Datei in einem Browser mit aktiviertem JavaScript.</noscript>
+  <script id="review-data" type="application/json">__REVIEW_DATA__</script>
+  <script>__REVIEW_JS__</script>
+</body>
+</html>

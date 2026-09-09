@@ -1,0 +1,7 @@
+metric,condition_id,mean_score
+outcome_correctness,raw,0.6225855513307985
+outcome_correctness,oracle_bgb_paragraph_ids,0.5813117870722433
+legal_reasoning_correctness,raw,0.5501520912547528
+legal_reasoning_correctness,oracle_bgb_paragraph_ids,0.4700380228136882
+legal_basis_correctness,raw,0.6245437262357414
+legal_basis_correctness,oracle_bgb_paragraph_ids,0.5036501901140684

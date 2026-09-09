@@ -1,0 +1,8 @@
+Frage:
+{question}
+
+Referenzantwort (Gold):
+{gold}
+
+Genau vier anonymisierte Antworten als JSON-Objekt:
+{candidates_json}

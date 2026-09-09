@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-__REVIEW_JS_HASH__'; style-src 'sha256-__REVIEW_CSS_HASH__'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Auswertung der juristischen Annotation</title>
+  <style>__REVIEW_CSS__</style>
+</head>
+<body class="organizer">
+  <header class="header"><div><h1>Auswertung: zwei Fachpersonen</h1><p>Privat für die Studienleitung – nicht an die Annotatoren weitergeben.</p></div><button id="download-combined" type="button" class="primary" disabled>Gesamtdaten herunterladen</button></header>
+  <main>
+    <section class="instructions"><h2>Beide FINAL-Dateien laden</h2><p>Wählen Sie die endgültigen JSON-Dateien von annotator_1 und annotator_2. Es wird nichts hochgeladen. Alle Originaldateien bitte aufbewahren.</p><input id="returns" type="file" multiple accept=".json,application/json"><p id="load-state" role="status">Noch keine Abgaben geladen.</p><p id="error" role="alert" hidden></p></section>
+    <section id="overview" hidden><h2>Übereinstimmung</h2><p id="sample-info"></p><div id="summaries"></div></section>
+    <section id="all-cases" hidden><h2>Alle Fragen und Antworten</h2><label for="case-filter">Ansicht <select id="case-filter"><option value="all">Alle Fälle</option><option value="different">Abweichende Rangfolge / nicht beurteilbar</option></select></label><div id="organizer-cases"></div></section>
+    <footer>Nur beschreibende Auswertung. Keine unabhängigen 600 Beobachtungen aus 100 Fragen ableiten. Bei späteren Konfidenzintervallen die gemeinsamen Kontextgruppen berücksichtigen. Zur Sicherung beide FINAL-Dateien und die heruntergeladenen Gesamtdaten aufbewahren.</footer>
+  </main>
+  <script id="review-data" type="application/json">__REVIEW_DATA__</script>
+  <script>__REVIEW_JS__</script>
+</body>
+</html>

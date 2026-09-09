@@ -1,0 +1,7 @@
+{
+  "name": "legal-context-compression-offline-ui-tests",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Development-only DOM verification; participant apps have no npm dependencies",
+  "devDependencies": {"jsdom": "19.0.0"}
+}

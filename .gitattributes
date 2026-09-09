@@ -1,0 +1,6 @@
+* text=auto eol=lf
+/src/legal_repro/assets/** -text
+/figures/** -text
+/participant_apps/** -text
+*.gz -text
+*.zip -text

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-__REVIEW_JS_HASH__'; style-src 'sha256-__REVIEW_CSS_HASH__'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Legal compression · Evidence review</title>
+  <style>__REVIEW_CSS__</style>
+</head>
+<body>
+  <a class="skip-link" href="#detail">Skip to answers</a>
+  <header class="masthead">
+    <div><div class="eyebrow">German legal context compression</div><h1>Evidence review</h1></div>
+    <div><div id="coverage">Loading verified evidence…</div><span class="offline">Offline · read-only · no model calls</span></div>
+  </header>
+  <div id="error" role="alert" hidden></div>
+  <div class="layout">
+    <aside class="sidebar">
+      <label for="search">Find a question</label>
+      <input id="search" type="search" placeholder="Question, answer, Gold or ID" autocomplete="off">
+      <label for="relation">Compressed vs uncompressed</label>
+      <select id="relation">
+        <option value="any">All questions</option>
+        <option value="better">Compressed ranked higher</option>
+        <option value="tie">Tied</option>
+        <option value="worse">Compressed ranked lower</option>
+      </select>
+      <div id="matches" class="muted" role="status" aria-live="polite"></div>
+      <nav id="question-list" aria-label="Evaluation questions"></nav>
+    </aside>
+    <main>
+      <section class="controls" aria-label="Comparison controls">
+        <label>Compression method<select id="method" disabled></select></label>
+        <label>Requested ratio<select id="ratio" disabled></select></label>
+        <label>Answers shown<select id="view"><option value="four">Four-way comparison</option><option value="all">All 18 answers</option></select></label>
+      </section>
+      <div class="navigation">
+        <div><button id="previous" type="button">← Previous</button><button id="next" type="button">Next →</button><span id="position" class="muted"></span></div>
+        <div><button id="expand" type="button" aria-pressed="false">Expand answer text</button><button id="copy-link" type="button">Copy question link</button></div>
+      </div>
+      <div id="detail" tabindex="-1"><p class="empty">Loading all 526 questions and their saved judgments…</p></div>
+      <details class="help">
+        <summary>How to read this evidence</summary>
+        <p><strong>Scores:</strong> Outcome correctness, legal reasoning correctness and legal basis correctness are separate answer-versus-Gold grades from 0 to 1; higher is better. Cards show primary replicate 1. Reliability repeats are displayed separately, never averaged.</p>
+        <p><strong>Ranks:</strong> Each question has 15 separate four-answer comparisons, one per method/target. Rank 1 is best. Ties share occupied positions: two answers tied for first receive rank 1.5, not ranks 1 and 2. The numerical scores do not determine these independently judged ranks. The three controls can receive different ranks in different comparisons.</p>
+        <p><strong>Limits:</strong> Paragraph IDs were supplied from ground truth, not predicted by a retrieval system. These machine judgments assess agreement with Gold; they do not verify retained-context grounding or replace lawyer assessment. The 18-answer view is not a global ranking of 18 candidates. No statistical tests or significance markers are added here.</p>
+        <div id="provenance"></div>
+        <p>This page contains the evaluation material. Keep it private. It sends no data, loads no external assets and cannot change the experiment.</p>
+      </details>
+      <div id="notice" role="status" aria-live="polite"></div>
+    </main>
+  </div>
+  <noscript>This offline viewer needs JavaScript enabled. No internet connection is needed.</noscript>
+  <script id="review-data" type="application/json">__REVIEW_DATA__</script>
+  <script>__REVIEW_JS__</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Frage:
+{question}
+
+Referenzantwort (Gold):
+{gold}
+
+Anonymisierte zu bewertende Antwort:
+{answer}

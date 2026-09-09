@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the dataset and research study when using this reproduction artifact."
+title: "German legal context compression: frozen-evidence reproduction release"
+authors:
+  - name: "mpriorust"
+type: software
+version: 0.1.0
+url: "https://github.com/mpriorust/legal-context-compression-repro"
+abstract: "Offline figure reconstruction and one-key hosted answer/judge replication using frozen compressed statutory contexts."

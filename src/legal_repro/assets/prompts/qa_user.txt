@@ -1,0 +1,16 @@
+Beantworte die Rechtsfrage unter Beachtung der angegebenen Kontextart.
+
+Bei der Kontextart „gesetzestext“ ist der bereitgestellte Gesetzestext entweder unkomprimiert oder komprimiert. Behandle beide Formen gleich und beantworte die Rechtsfrage ausschließlich anhand dieses nichtleeren Gesetzestextes.
+Bei der Kontextart „paragraphenliste“ besteht der Kontext aus einem geordneten JSON-Array mit BGB-Paragraphenbezeichnungen ohne Gesetzeswortlaut. Verwende nur diese bezeichneten Paragraphen als bereitgestellte Normauswahl; ihren Inhalt darfst du aus deinem im Modell vorhandenen juristischen Wissen erschließen.
+Bei der Kontextart „kein_kontext“ wurde kein Kontext bereitgestellt. Beantworte die Rechtsfrage anhand deines eigenen, im Modell vorhandenen juristischen Wissens.
+
+Nenne die entscheidenden Voraussetzungen und einschlägigen Normen präzise. Antworte vollständig, aber knapp, und beende die Antwort nach der begründeten Schlussfolgerung. Wiederhole weder den Kontext noch bereits genannte Punkte.
+
+Kontextart:
+{context_kind}
+
+Kontext:
+{context}
+
+Frage:
+{question}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-__REVIEW_JS_HASH__'; style-src 'sha256-__REVIEW_CSS_HASH__'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Juristische Antwortbewertung</title>
+  <style>__REVIEW_CSS__</style>
+</head>
+<body>
+  <a class="skip" href="#case">Zu den Antworten</a>
+  <header class="header">
+    <div><div class="eyebrow">Unabhängige fachliche Bewertung</div><h1>Juristische Antwortbewertung</h1><p id="study-info">Bewertungspaket wird geladen …</p></div>
+    <div class="file-actions"><button id="download" type="button" disabled>Ergebnisse / Sicherung herunterladen</button><label class="file-label" for="import">Sicherung laden<input id="import" type="file" accept=".json,application/json" disabled></label></div>
+  </header>
+  <div id="error" role="alert" hidden></div>
+  <div id="storage-warning" role="alert" hidden></div>
+  <div class="layout">
+    <aside>
+      <h2>Ihr Fortschritt</h2>
+      <p id="progress" aria-live="polite">Noch keine Bewertung</p><progress id="progress-bar" max="100" value="0"></progress>
+      <p id="save-state" class="small" role="status">Noch nichts gespeichert.</p>
+      <label for="filter">Fälle anzeigen</label><select id="filter"><option value="all">Alle Fälle</option><option value="open">Noch offen / Entwurf</option><option value="ranked">Rangfolge bestätigt</option><option value="ungradable">Nicht beurteilbar</option></select>
+      <nav id="cases" aria-label="Fallauswahl"></nav>
+      <p class="small">Bitte vor jeder Pause eine Sicherungsdatei herunterladen. Browser-Speicherung ersetzt nicht die Ergebnisabgabe.</p>
+    </aside>
+    <main>
+      <details class="instructions" open><summary>So funktioniert die Bewertung</summary>
+        <ol><li>Lesen Sie die Frage und die Referenzantwort. Die Referenz ist keine fünfte Kandidatenantwort.</li><li>Bewerten Sie die vier Antworten nach rechtlichem Ergebnis, Herleitung/Subsumtion und Rechtsgrundlagen. Stil und Länge sollen die Rangfolge nicht bestimmen.</li><li>Wählen Sie unter jeder Antwort einen Rang: <strong>1 = beste Antwort</strong>, 4 = schlechteste. Derselbe Rang ist mehrfach erlaubt und bedeutet Gleichstand. Mindestens eine Antwort muss Rang 1 erhalten.</li><li>Bestätigen Sie die Bewertung. Sie können Fälle überspringen und später zurückkehren. Bei mangelnder Beurteilbarkeit wählen Sie die entsprechende Option und begründen dies.</li><li>Laden Sie am Ende Ihre Ergebnisdatei herunter und senden Sie sie an die Studienleitung.</li></ol>
+        <p>Die Buchstaben sind neutrale, je Fall neu zugewiesene Kennzeichnungen. Wenn die Referenz zweifelhaft ist, markieren und erläutern Sie dies bitte gesondert. Nutzen Sie nur dieses Paket während der Bewertung.</p>
+        <p id="completion-guide" hidden>Bewerten Sie ausschließlich relativ zur Referenz, ohne externe Quellen oder eigene abweichende Rechtsauffassungen einzubeziehen. Gleichstand bedeutet gleiche rechtliche Qualität, nicht Unsicherheit. Beispiel: A und B gleich gut, danach C, danach D → 1, 1, 2, 3. Alle gleich gut → 1, 1, 1, 1. Eine kurze Begründung unter „Anmerkung“ hilft bei der späteren Auswertung. Arbeiten Sie unabhängig und tauschen Sie sich erst nach beiden endgültigen Abgaben aus. Die LLM-Übersicht erscheint erst nach dem gesonderten endgültigen Abschluss; danach sind Bewertungen gesperrt. Bitte vorher keinen Quelltext ansehen.</p>
+      </details>
+      <div class="navline"><button id="previous" type="button">← Vorheriger Fall</button><span id="case-position"></span><button id="next" type="button">Nächster Fall →</button><button id="expand" type="button" aria-pressed="false">Antworten vollständig ausklappen</button></div>
+      <article id="case" tabindex="-1"><p>Die anonymisierten Fälle werden geladen …</p></article>
+      <section class="assessment" aria-labelledby="assessment-title">
+        <h2 id="assessment-title">Ihre Bewertung</h2>
+        <div class="assessment-top"><div><div class="small">Vorschau: beste → schlechteste Antwort</div><div id="rank-preview">Noch keine Rangfolge</div></div><button id="all-tied" type="button">Alle vier gleichrangig</button></div>
+        <details id="extras"><summary>Anmerkung / nicht beurteilbar <span class="small">(optional)</span></summary>
+        <label class="check"><input id="ungradable" type="checkbox">Ich kann diesen Fall nicht verlässlich beurteilen.</label>
+        <div class="optional-fields"><label for="material">Sind Unterschiede rechtlich relevant? <span class="small">(optional)</span><select id="material"><option value="">Bitte wählen</option><option value="yes">Ja</option><option value="no">Nein</option><option value="uncertain">Unklar</option></select></label><label class="check"><input id="reference-issue" type="checkbox">Die Referenzantwort ist möglicherweise fehlerhaft oder unvollständig.</label></div>
+        <label for="notes">Anmerkung / Begründung <span class="small">(optional; bei Nichtbeurteilbarkeit erforderlich)</span></label><textarea id="notes" maxlength="10000" rows="3" placeholder="Bitte beziehen Sie sich bei Bedarf auf Antwort A, B, C oder D."></textarea>
+        </details>
+        <div class="confirm-line"><button id="confirm" class="primary" type="button" disabled>Bewertung bestätigen & weiter</button><span id="validation" class="small" aria-live="polite"></span></div>
+      </section>
+      <section id="finished" hidden><h2>Alle Fälle bearbeitet</h2><p>Bitte jetzt oben auf <strong>„Ergebnisse / Sicherung herunterladen“</strong> klicken und die JSON-Datei an die Studienleitung zurücksenden. Ihre Antworten werden nicht automatisch übertragen.</p></section>
+      <section id="submission" class="assessment" hidden><h2>Alle Fälle bearbeitet – endgültige Abgabe</h2><p>Sie können Ihre Angaben jetzt noch prüfen. Mit dem endgültigen Abschluss werden sie gesperrt, eine vollständige FINAL-Datei heruntergeladen und die LLM-Übereinstimmung angezeigt.</p><button id="finalize" class="primary" type="button">Endgültig abschließen &amp; Übersicht anzeigen</button></section>
+      <section id="agreement" class="assessment" hidden><h2>Ihre Übereinstimmung mit dem LLM</h2><p>Ihre Bewertungen sind endgültig gespeichert und gesperrt. Bitte die heruntergeladene <strong>FINAL_…json</strong> an die Studienleitung senden. Darin stehen alle Fragen, Antworten und Bewertungen. Falls der Download fehlt, oben erneut herunterladen.</p><div id="agreement-body"></div><p>Bitte erst mit der anderen Person austauschen, wenn beide endgültig abgegeben haben.</p></section>
+      <p id="notice" role="status" aria-live="polite"></p>
+      <footer>Lokale Anwendung · keine Internetverbindung nötig · keine automatische Übertragung</footer>
+    </main>
+  </div>
+  <noscript>Bitte aktivieren Sie JavaScript und öffnen Sie diese Datei in einem Webbrowser.</noscript>
+  <script id="review-data" type="application/json">__REVIEW_DATA__</script>
+  <script>__REVIEW_JS__</script>
+</body>
+</html>

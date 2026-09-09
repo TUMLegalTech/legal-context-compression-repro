@@ -1,0 +1,88 @@
+{
+  "accepted": true,
+  "date": "2026-09-09",
+  "tests": {
+    "passed": 119,
+    "failures": 0,
+    "errors": 0,
+    "junit_sha256": "21acbb197584785e5c7ef377a728393fe5139ad7d200b542242a796fb11ee0d5"
+  },
+  "wheel_sha256": "5d5787a494db514e8285d5dcb9da93e109b9a08fe5d2ed13fbdfbc455fdb77c5",
+  "wheel_bytes": 13982904,
+  "isolated_wheel": {
+    "accepted": true,
+    "attempted_source_reads": [],
+    "figures": {
+      "csv_sha256": {
+        "data/ranking_values.csv": "28b8ebb534ae1bd00f0f4dcae7910d5bea0b453d3d7ee3ea8a84f429f7d14bc5",
+        "data/reference_values.csv": "49225deb53f10c012d75b59a75e4900a7bbb820bcc6d078327911ac348fc2053",
+        "data/score_values.csv": "3e44c473084e039a2938b0815345d858bce057b9b48ea233ab85879ab85c7ceb"
+      },
+      "numerical_points": 45,
+      "plots": [
+        "outcome_correctness",
+        "legal_reasoning_correctness",
+        "legal_basis_correctness",
+        "ranking_comparisons"
+      ],
+      "ranking_segments": 45
+    },
+    "full_plan": {
+      "conditions": 18,
+      "generation": 9468,
+      "questions": 526,
+      "rank": 8679,
+      "score": 10404,
+      "semantic_calls": 28551
+    },
+    "human_judgments_created": 0,
+    "installed_package": "/tmp/legal-repro-wheel-check-Rgf0TVQS/venv/lib/python3.12/site-packages/legal_repro/__init__.py",
+    "kind": "isolated_installed_wheel_offline",
+    "live_model_requests": 0,
+    "network_blocked": true,
+    "participant_zip_paths": [
+      "/tmp/legal-repro-wheel-check-Rgf0TVQS/acceptance/pairwise.zip",
+      "/tmp/legal-repro-wheel-check-Rgf0TVQS/acceptance/four.zip",
+      "/tmp/legal-repro-wheel-check-Rgf0TVQS/acceptance/dual/annotator_1.zip",
+      "/tmp/legal-repro-wheel-check-Rgf0TVQS/acceptance/dual/annotator_2.zip"
+    ],
+    "python": "3.12.11",
+    "source_reads_blocked": true,
+    "verification": {
+      "accepted": true,
+      "asset_files_verified": 26,
+      "compression_fractions_recomputed": 15,
+      "conditions": 18,
+      "kind": "offline_reconstruction",
+      "live_model_requests": 0,
+      "max_score_mean_error": 0.0,
+      "primary_rankings": 7890,
+      "primary_scores": 9468,
+      "questions": 526,
+      "ranking_blocks_verified": [
+        128,
+        398,
+        526
+      ],
+      "ranking_repeats": 789,
+      "reference_answers": 9468,
+      "retained_rows_with_downstream_token_expansion": 24,
+      "score_means_recomputed": 54,
+      "score_repeats": 936
+    },
+    "viewer": {
+      "answers": 9468,
+      "questions": 526
+    }
+  },
+  "source_files_rechecked": 72,
+  "unchanged_source_files": 70,
+  "missing_source_paths_since_export": [
+    "review/expert100_four_answers.zip",
+    "review/expert100_simple.zip"
+  ],
+  "changed_source_files": [],
+  "participant_copies_match_export": true,
+  "live_api_test_performed": false,
+  "github_publication_performed": false
+}
