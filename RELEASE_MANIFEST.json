@@ -50,12 +50,12 @@
       "sha256": "a464c3751ad6e4234f98871413a9287476d0f36a66b18cd762cb5a2aaba6cd06"
     },
     "docs/VALIDATION.md": {
-      "bytes": 3041,
-      "sha256": "33de0dd2256a87a2a4c93ceb68e732523409f9578ca3384969c40fce17b6ff2a"
+      "bytes": 3443,
+      "sha256": "80da9f21ce8b6d16b189f08dc00d60b849ffa986d45fa68fbe418a8db65b116d"
     },
     "docs/validation.json": {
-      "bytes": 2835,
-      "sha256": "a8b412949218b9aff528f7280a1e9bf5160b621b74e484676381e6e1663fc04e"
+      "bytes": 3431,
+      "sha256": "90090c6f4627463bb88d5a351a15beb0efe04852f1dde4b582052102614ccab1"
     },
     "figures/README.md": {
       "bytes": 3540,
@@ -424,6 +424,6 @@
   },
   "intended_remote": "https://github.com/mpriorust/legal-context-compression-repro.git",
   "schema_version": 1,
-  "total_bytes": 16734433,
+  "total_bytes": 16735431,
   "visibility": "private"
 }

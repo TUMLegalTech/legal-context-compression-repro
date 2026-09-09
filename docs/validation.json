@@ -84,5 +84,19 @@
   "changed_source_files": [],
   "participant_copies_match_export": true,
   "live_api_test_performed": false,
-  "github_publication_performed": false
+  "github_publication_performed": true,
+  "github_publication": {
+    "published_at": "2026-09-09T09:53:35.087434Z",
+    "remote": "https://github.com/mpriorust/legal-context-compression-repro.git",
+    "private": true,
+    "initial_code_commit": "078c36dd269237fc0f313b41e52fbfd199b66b7c",
+    "fresh_github_clone_verified": true,
+    "offline_workflow": {
+      "url": "https://github.com/mpriorust/legal-context-compression-repro/actions/runs/34337251444",
+      "commit": "078c36dd269237fc0f313b41e52fbfd199b66b7c",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  },
+  "updated_at": "2026-09-09T09:55:31.905879Z"
 }

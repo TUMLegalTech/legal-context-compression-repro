@@ -39,9 +39,15 @@ affect these checks. GPU training/compression, the complete API rerun, and Windo
 Python execution were not performed. Original numerical values are reproducible
 from saved evidence; hosted runtime equivalence is not claimed.
 
-Publication to the named private GitHub repository and the 18-call live OpenRouter
-check remain pending approval of their exact active contracts and credentials.
-The local offline result is complete; API availability listings are not a substitute
+The release was published to the private
+[`mpriorust/legal-context-compression-repro`](https://github.com/mpriorust/legal-context-compression-repro)
+repository on 9 September 2026. A fresh GitHub clone verified the bundled evidence,
+and [GitHub's offline workflow](https://github.com/mpriorust/legal-context-compression-repro/actions/runs/34337251444)
+passed for the initial code release, `078c36dd269237fc0f313b41e52fbfd199b66b7c`.
+Publication details are recorded in `validation.json`.
+
+The approved 18-call live OpenRouter check is waiting for `OPENROUTER_API_KEY`.
+No paid requests have been made. API availability listings are not a substitute
 for a paid model test.
 
 Source recheck: all 70 remaining allowlisted source files still match their export
