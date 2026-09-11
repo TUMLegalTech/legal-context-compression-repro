@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "kind": "offline_publication_cleanup_validation",
+  "release_version": "0.1.0",
+  "validated_on": "2026-09-11",
+  "source_base_commit": "bb45079787906127d38d8d885197499f9a295857",
+  "tests_passed": 145,
+  "new_contract_cases": 11,
+  "api_contracts_require_github_fields": false,
+  "legacy_api_metadata_preserved": true,
+  "private_publication_checks_preserved": true,
+  "protected_files_unchanged": 60,
+  "protected_english_prompt_sha256": "e324350f73536d1e5ab13f7ff83aec73ecb9b0c1a94587db4615e6d2e0c101b6",
+  "original_packaged_assets_unchanged": 32,
+  "readme_lines": 115,
+  "readme_shell_blocks_checked": 5,
+  "documentation_links_valid": true,
+  "citation_schema_valid": true,
+  "provisional_attribution": "mpriorust",
+  "code_license": "MIT",
+  "wheel": {
+    "python": "3.12.11",
+    "sha256": "29df849f29c4601198062ffbedd59fd050d0b31ebf458a380970830ee5e8475e",
+    "locked_runtime_dependencies": true,
+    "license_files": [
+      "LICENSE",
+      "THIRD_PARTY_NOTICES.md"
+    ],
+    "network_blocked": true,
+    "source_reads_blocked": true,
+    "attempted_source_reads": 0
+  },
+  "offline_reconstruction": {
+    "accepted": true,
+    "asset_files_verified": 32,
+    "compression_fractions_recomputed": 15,
+    "conditions": 18,
+    "human_jointly_ranked_questions": 96,
+    "human_judgments": 200,
+    "human_questions": 100,
+    "kind": "offline_reconstruction",
+    "live_model_requests": 0,
+    "max_score_mean_error": 0.0,
+    "primary_rankings": 7890,
+    "primary_scores": 9468,
+    "questions": 526,
+    "ranking_blocks_verified": [
+      128,
+      398,
+      526
+    ],
+    "ranking_repeats": 789,
+    "reference_answers": 9468,
+    "retained_rows_with_downstream_token_expansion": 24,
+    "score_means_recomputed": 54,
+    "score_repeats": 936
+  },
+  "rebuilt_file_sha256": {
+    "figures/score_values.csv": "3e44c473084e039a2938b0815345d858bce057b9b48ea233ab85879ab85c7ceb",
+    "figures/reference_values.csv": "49225deb53f10c012d75b59a75e4900a7bbb820bcc6d078327911ac348fc2053",
+    "figures/ranking_values.csv": "28b8ebb534ae1bd00f0f4dcae7910d5bea0b453d3d7ee3ea8a84f429f7d14bc5",
+    "human-evaluation/index.html": "74c9ad0ec828ea66832fc5bc944794a60e1c3343af397950bba226a20d4adcf4",
+    "human-evaluation/judgments.csv": "2649a9e7421003afad9daa311c9e6a0a5886637c08d5d7304409077fb8c5a725",
+    "human-evaluation/summary.json": "55665b96c2ecc69d651f3fe2d9ed92e227bb7851935e9d1ce7f5e792d1a1c23e"
+  },
+  "smoke_semantic_calls_planned": 18,
+  "full_semantic_calls_planned": 28551,
+  "live_model_requests": 0,
+  "new_paid_api_validation": false
+}

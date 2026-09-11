@@ -20,6 +20,12 @@ with one compressed answer and the three controls. Original 128-row and later
 398-row blocks are retained separately. The extension was post-results and
 descriptive; it was not newly prespecified. No all-method leaderboard is inferred.
 
+The plotted compression axis uses realized original/retained token ratios;
+requested 1.10x/1.25x/2.00x targets remain separate. Twenty-four saved DAC
+question/condition rows expand under downstream retokenization and remain
+included as recorded. Offline reconstruction preserves the original plotted
+CSVs byte-for-byte.
+
 ## Hosted adaptation
 
 The [Qwen listing](https://openrouter.ai/qwen/qwen3.5-9b) and
@@ -51,6 +57,20 @@ Local server topology, throughput profiles, latency and GPU bit equivalence do
 not transfer to hosted inference. Statistical outputs remain descriptive; neither
 scores nor rankings establish no-loss, non-inferiority or retained-context grounding.
 
+## Hosted workloads
+
+The two-question smoke uses uncompressed text, Legal LLMLingua-2 1.10x,
+paragraph IDs and no context: 8 answers, 8 scores and 2 rankings. The full
+526-question plan creates 9,468 answers, 10,404 pointwise judgments (936 reliability
+repeats) and 8,679 rankings (789 repeats), totaling 28,551 semantic calls.
+Execution is sequential; the complete retry allowance is 104,736 requests.
+
+Full-run summaries also compute the original paired context-cluster contrasts
+with 10,000 bootstrap replicates, 100,000 sign randomizations and family-wise
+Holm correction. This complete hosted workload has not been run for release
+validation. The [recorded live smoke check](SMOKE_TEST.md) verifies transport,
+identity and output validity, without establishing population-level quality.
+
 ## Billing and recovery
 
 The sole credential is OPENROUTER_API_KEY, from the environment or the contracted
@@ -59,7 +79,7 @@ cost from UTF-8 input size, a wrapper allowance, the completion-token ceiling,
 and fixed per-million-token price ceilings. Failed/uncertain requests keep their
 reservation. This deliberately stops early rather than relying on missing usage
 fields. Actual reported cost is recorded separately; a provider-side key spending
-limit is the independent billing ceiling. Reasoning tokens are included in
+limit is an additional spending control. Reasoning tokens are included in
 completion cost. HTTP 408/429/5xx, connection failures, truncated or invalid
 completions have bounded retries; identity and authentication failures stop.
 

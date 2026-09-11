@@ -1,180 +1,115 @@
 # Legal context compression: reproduction release
 
-Reconstruct the published figures offline, or generate new answers and judgments
-with **one OpenRouter API key**. The supplied Gold answers and frozen compressed
-contexts are unchanged. No GPU, model weights, Docker, training, or Hugging Face
-account is needed.
+Rebuild the published results offline, or generate new answers and judgments
+with **one OpenRouter API key**. This release covers 526 questions and 18 context
+conditions. It uses frozen compressed contexts; compressor training and execution
+are outside its scope. Hosted reruns may produce different answers from the
+original local models. No GPU, model weights, Docker or Hugging Face account is needed.
 
-This release covers the completed 526-question experiment and its full-526
-ranking extension. It does not retrain or rerun the compressors. An API rerun
-uses hosted versions of the original model families; it does not claim the
-original local model revisions, quantization, or identical answers.
+## 1. View the published material
 
-| Find in this release | Link |
+| Material | Link |
 | --- | --- |
-| Exact generation, scoring, ranking and training-teacher prompts | [Prompt index](prompts/README.md) |
-| English reference translations of prompts and annotator instructions | [English translations](prompts/en/README.md) |
-| English translations of annotator notes, with German originals | [Bilingual notes](human_evaluation/en/README.md) |
-| Both annotators' answers, notes and agreement analysis | [Human evaluation](human_evaluation/README.md) |
-| Original result figures and plotted values | [Figures](figures/) |
-| Model settings and hosted reproduction boundary | [Protocol](docs/PROTOCOL.md) |
+| Original figures and plotted values | [Figures](figures/) |
+| Both annotators' judgments, answer texts and agreement | [Human evaluation](human_evaluation/README.md) |
+| Exact German prompts used in the study | [Prompt index](prompts/README.md) |
+| English prompts and annotator instructions | [English translations](prompts/en/README.md) |
+| All 31 annotator notes in German and English | [Bilingual notes](human_evaluation/en/README.md) |
 
-For paper references, use a [commit permalink](prompts/README.md#citing-these-artifacts)
-to the prompt index and annotation files. The paper itself is not bundled.
+These files can be inspected without installation. Download/open the
+[human evaluation HTML](human_evaluation/index.html) locally to browse the
+100 questions and 200 judgments. For paper citations, use version `v0.1.0` or
+[commit permalinks](prompts/README.md#citing-these-artifacts), with [CITATION.cff](CITATION.cff).
 
-## Start with the offline checks
+## 2. Rebuild the results offline
 
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run
-these commands from this checkout. Python 3.12 and dependencies are locked.
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run:
 
 ```bash
+git clone --branch v0.1.0 https://github.com/TUMLegalTech/legal-context-compression-repro.git
+cd legal-context-compression-repro
 uv sync --frozen
-uv run legal-repro verify
-uv run legal-repro figures --output outputs/figures-1
-uv run legal-repro review --output outputs/review-1
-uv run legal-repro human --output outputs/human-1
+uv run --frozen legal-repro verify
+uv run --frozen legal-repro figures --output outputs/figures-1
+uv run --frozen legal-repro review --output outputs/review-1
+uv run --frozen legal-repro human --output outputs/human-1
 ```
 
-Open `outputs/review-1/index.html` locally. It contains all 526 questions,
-9,468 saved answers, 9,468 primary scores, 7,890 primary rankings, and separately
-labeled reliability repeats. All commands above work without credentials or
-model requests. Use a new output directory for each build.
+Python 3.12 and dependencies are locked. Installation needs internet access;
+the four reproduction commands need no network, credentials or model requests.
+Use a new output directory each time. Linux is the validated Python runtime.
 
-The four original PNG/SVG/PDF figures are already in [figures/](figures/).
-The builder reproduces the original three plotted CSVs byte-for-byte. The
-numerical figures use realized original/retained token ratios; requested
-1.10x/1.25x/2.00x targets remain separate. Twenty-four saved DAC question/condition
-rows expand under downstream retokenization; they remain included as recorded.
+| Output | Contents |
+| --- | --- |
+| `outputs/figures-1/` | Four figures as PNG/SVG/PDF and three plotted CSVs matching the originals byte-for-byte |
+| `outputs/review-1/index.html` | All 9,468 saved answers, 9,468 primary scores, 7,890 primary rankings and separate reliability repeats |
+| `outputs/human-1/` | The human report, 200-row judgment CSV and agreement summary, matching the published files |
 
-## Verify the API on two questions
+Open either `index.html` directly in a browser. `verify` checks the bundled
+evidence and recomputes the original means, compression fractions and ranking counts.
 
-Use a funded **`OPENROUTER_API_KEY`**, set locally in your shell or secret manager.
-Alternatively, put the single assignment `OPENROUTER_API_KEY=your-key` in the
-Git-ignored `.env` in this checkout, or put the key alone in the Git-ignored
-`openrouter_key.txt`. Resolution order is environment, `.env`, then
-`openrouter_key.txt`. These files are read only after an active contract is
-validated; keep their filesystem permissions private.
-It is read only by the Python API runner and is never embedded in the offline
-apps. A key spending limit of $1 also provides a provider-side billing ceiling.
+## 3. Run a new OpenRouter evaluation
 
-Hosted mappings are `qwen/qwen3.5-9b` through `parasail/bf16` for generation and
-`mistralai/mistral-small-2603` through `mistral/zdr` for evaluation. The runner
-checks current endpoint availability and required parameters, disables fallback,
-and stops if the pinned route or price ceiling is unavailable. See
-[protocol differences](docs/PROTOCOL.md).
+Set a funded `OPENROUTER_API_KEY` in your shell or in the ignored `.env` file
+as `OPENROUTER_API_KEY=your-key`. The key is read only after contract validation
+and is never embedded in the HTML reports. [Contract and credential details](contracts/README.md).
+The pinned routes use Qwen3.5-9B for answers and Mistral Small for judging;
+[model settings and reproduction limits](docs/PROTOCOL.md) are recorded separately.
+
+### Start with two questions
 
 ```bash
-uv run legal-repro smoke --dry-run
-uv run legal-repro contract --write contracts/local-smoke-1.txt --output-root outputs/smoke-1
+uv run --frozen legal-repro smoke --dry-run
+uv run --frozen legal-repro contract \
+  --write contracts/local-smoke-1.txt --output-root outputs/smoke-1
 ```
 
-Inspect the generated contract's exact workspace, output path, and limits.
-When you authorize that run, change its single `STATUS: DRAFT` line to
-`STATUS: ACTIVE`, then execute:
+Inspect the contract's paths and limits. When you authorize the run, edit its
+single `STATUS: DRAFT` line to `STATUS: ACTIVE`, then run:
 
 ```bash
-uv run legal-repro smoke --contract contracts/local-smoke-1.txt
+uv run --frozen legal-repro smoke --contract contracts/local-smoke-1.txt
 ```
 
-The fixed two questions each receive uncompressed text, Legal LLMLingua-2 1.10x,
-paragraph IDs, and no context: **8 answers + 8 scores + 2 rankings = 18 semantic
-calls**. It permits at most 64 requests including retries, reserves a conservative
-maximum $1, and stops after one hour. A 12.8 MB public tokenizer file is fetched
-into the run output and verified against its pinned SHA-256; no model weights
-are downloaded.
+This makes **8 answers + 8 scores + 2 rankings**, with a $1 reservation budget,
+at most 64 requests including retries, and a one-hour time limit. It downloads
+a pinned 12.8 MB tokenizer file, without model weights. This checks working
+inference and valid output; it does not establish reproduction of answer quality.
 
-Inspect `COMPLETE.json`, `summary.json`, and the answer/score/rank JSONL files.
-Requests, costs, failures, settings and source identities are retained. Successful
-rows are never replaced. Resume an interrupted run within the same contract's
-time limit with `--resume`; changes to code, inputs or configuration are rejected.
-A completed resume validates its artifacts and makes no API calls.
+### Evaluate all 526 questions
 
-This small check establishes working inference and valid evaluation output.
-It cannot establish matching population scores, preservation of legal quality,
-or equivalence to the original local runtime. Test fixtures are explicitly
-labeled `synthetic_transport_test` and never count as a live API verification.
-
-The [9 September 2026 live smoke check](docs/SMOKE_TEST.md) completed all 18
-requests without retries, with $0.015073965 in reported API cost. The accompanying
-offline suite passed 125 tests.
-
-## Run the complete hosted evaluation
+This plans **28,551 calls** including reliability repeats. Choose your own dollar
+budget; the runner stops before a request would exceed its reservation budget. The request
+ceiling below permits the existing retry policy; it is not a cost estimate.
+Commands containing `read -p` use Bash.
 
 ```bash
-uv run legal-repro evaluate --dry-run
+uv run --frozen legal-repro evaluate --dry-run
+read -r -p "Maximum API budget in USD: " REPRO_MAX_USD
+uv run --frozen legal-repro contract --action evaluate \
+  --write contracts/local-evaluate-1.txt --output-root outputs/evaluate-1 \
+  --max-usd "$REPRO_MAX_USD" --max-requests 104736
 ```
 
-This plans 28,551 semantic calls: 9,468 new answers, 10,404 pointwise judgments
-including 936 reliability repeats, and 8,679 rankings including 789 repeats.
-To run it, create a separate contract with `--action evaluate`, choose an explicit
-`--max-usd` budget and `--max-requests` allowance, inspect it, activate it, and
-pass it to `legal-repro evaluate --contract ...`. The retry ceiling for the
-complete task set is 104,736 requests. Full contracts default to a seven-day
-wall-clock limit; `--max-seconds` changes that limit. Execution is sequential.
-The full run also computes the original paired context-cluster contrasts using
-10,000 bootstrap replicates, 100,000 sign randomizations and family-wise Holm
-correction. This complete API workload is not part of release smoke verification.
-
-## Published human evaluation
-
-The [human evaluation](human_evaluation/README.md) publishes both finalized
-annotator returns as anonymous scientific data: **200 judgments on 100 questions**,
-including original ranks, ties, notes and four ungradable judgments. The
-[CSV](human_evaluation/judgments.csv) is directly readable on GitHub; download/open
-the [HTML report](human_evaluation/index.html) to inspect all question and answer
-texts locally. `legal-repro human` rebuilds the report and agreement statistics
-without a key. Answers are aligned by their exact text, with each annotator's
-independently shuffled A–D labels preserved.
-
-<details>
-<summary>Create a new blinded annotation study</summary>
-
-The preserved [participant ZIPs](participant_apps/) can be opened without any
-installation or API key. Send only a participant ZIP, never this full repository
-or an analyst directory, to an annotator. Their downloaded JSON contains their
-judgments; the HTML/ZIP itself does not acquire saved annotations.
-
-Rebuild a new pairwise study and its separate private linkage key:
+Inspect this new contract and change its single `STATUS: DRAFT` line to
+`STATUS: ACTIVE` when you authorize the run, then execute:
 
 ```bash
-uv run legal-repro expert build --output outputs/pairwise-1 --private-output outputs/pairwise-key-1 --panel pairwise
-uv run legal-repro expert build --output outputs/four-1 --private-output outputs/four-key-1 --panel four-contexts --seed-from outputs/pairwise-key-1/linkage.json
-uv run legal-repro expert dual-build --output outputs/dual-1 --private-output outputs/dual-key-1 --seed-from outputs/four-key-1/linkage.json
+uv run --frozen legal-repro evaluate --contract contracts/local-evaluate-1.txt
 ```
 
-This samples 100 questions with a new private seed; the later commands retain
-that same sample. The original distributed ZIPs remain unchanged. Their original
-private keys are intentionally absent, so returns from those original ZIPs must
-be linked by the original study organizer.
+Execution is sequential, with a seven-day default time limit. Successful runs
+write `COMPLETE.json`, `summary.json`, `answers.jsonl`, `scores.jsonl` and
+`ranks.jsonl` under the selected output root. Request/cost ledgers are retained.
+Use the same command with `--resume` after an interruption, within the original
+limits and with unchanged code, inputs and contract. A full hosted rerun has not
+been performed for release validation; see the [completed smoke check](docs/SMOKE_TEST.md).
 
-`legal-repro expert link --help` links a single return. `dual-join --help`
-compares two final returns. The dual study preserves separate identities,
-independently randomized labels, finalization locks, post-submission feedback,
-and an offline organizer page. Ties, drafts, abstentions and missing returns
-remain distinct. Do not count synthetic tests as human evaluations.
+## Development, citation and licensing
 
-</details>
+[Validation](docs/VALIDATION.md) · [Development and maintainer tools](docs/IMPLEMENTATION.md#development-checks)
+· [Create a new annotation study](docs/IMPLEMENTATION.md#create-a-new-annotation-study).
+Node/npm is needed only for development tests. The paper itself is not bundled.
 
-## Installation and validation
-
-The source checkout plus `uv sync --frozen` is the supported locked installation.
-The built wheel also includes all runtime assets and is checked from a separate
-directory. Linux with Python 3.12 is the validated runtime. Participant HTML
-apps are portable desktop-browser files. Browser tests use Node/jsdom and do
-not establish behavior in every real browser.
-
-```bash
-npm ci --ignore-scripts --no-audit --no-fund
-uv run --frozen pytest -q
-uv build --wheel --out-dir outputs/wheel-1
-```
-
-`npm` is needed only for development tests. The human apps have no external
-JavaScript dependencies. CI runs offline evidence and synthetic transport tests;
-it never reads an API key or runs models.
-
-See [release validation](docs/VALIDATION.md), [implementation provenance](docs/IMPLEMENTATION.md),
-and [third-party notices](THIRD_PARTY_NOTICES.md). The public repository is
-[`TUMLegalTech/legal-context-compression-repro`](https://github.com/TUMLegalTech/legal-context-compression-repro).
-Public availability does not assign a blanket open-source license to all bundled
-material; the component-specific rights and attribution notices remain applicable.
+Original code: [MIT](LICENSE). Bundled material retains its existing terms;
+see [third-party notices](THIRD_PARTY_NOTICES.md).

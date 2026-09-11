@@ -1,5 +1,5 @@
 {
-  "file_count": 125,
+  "file_count": 128,
   "files": {
     ".env.example": {
       "bytes": 20,
@@ -26,40 +26,48 @@
       "sha256": "654105be8ff307c5c06a7cd69135af609f4a535dbe863bc518207d902bb3e367"
     },
     "CITATION.cff": {
-      "bytes": 503,
-      "sha256": "61278db527d3678c39308589df0fe40e7d5f52c60a9b454a7bd680fcb59006db"
+      "bytes": 696,
+      "sha256": "d32ca99d0b386ef30074cf0a27040740a7ad6ff78d4b71f42b6b83862f89cd94"
+    },
+    "LICENSE": {
+      "bytes": 1066,
+      "sha256": "416d40cc362987b47cb16a487c541d92c0f6d300471f3ec231c1c5a104173d61"
     },
     "README.md": {
-      "bytes": 9443,
-      "sha256": "133021f1f266f8507ed51e6d208346837a934f236defc643bbfe6b891c4d4bbd"
+      "bytes": 5568,
+      "sha256": "832bce72eab11ffe183b8e709ba931ee077211928a483e762e39dd0b64917037"
     },
     "THIRD_PARTY_NOTICES.md": {
-      "bytes": 1678,
-      "sha256": "b24a2ee9afe79f74b8f1e382491e82d2f80269515b6c5f2b06367d8d1d205bae"
+      "bytes": 1926,
+      "sha256": "5d549693dc2434f8af030d779f8f4bd6d011a5c0dc513519b7a0a3c56b2f41a2"
     },
     "contracts/README.md": {
-      "bytes": 1173,
-      "sha256": "729177d1ae7aa0de137a0405c500ab60fa2bb5a8fb0e0305a22893b72cc63950"
+      "bytes": 2360,
+      "sha256": "4d67aacf0ccbdc7a82f65d95fa1836549f5667896699c856cac8b1e451ed9b8d"
     },
     "docs/IMPLEMENTATION.md": {
-      "bytes": 4321,
-      "sha256": "314877a865205927519c693ded2e039f82b9e6503d10dc2babde22f4b52c277a"
+      "bytes": 8041,
+      "sha256": "20daff2cff331f8cab15b71bbd1cf322329b240204da35465e9cfe1076ab8157"
     },
     "docs/PROTOCOL.md": {
-      "bytes": 3999,
-      "sha256": "99ee2604335548fc629de82c9296647a0e4aac2827b366759516567c2df2ba3b"
+      "bytes": 5112,
+      "sha256": "8697daed211e646ddb1ebbe4209c9a5527519bb5a5e5fa56855b04d7db5ef42b"
     },
     "docs/SMOKE_TEST.md": {
       "bytes": 2610,
       "sha256": "d7c1f3b0eba149f49c4de69159c0823341a5eef5a3584c1df5b25d74c3386b22"
     },
     "docs/VALIDATION.md": {
-      "bytes": 5837,
-      "sha256": "82cdd6a8a86ca616331d100fd851ccdefbe0af9819ced82b1ebf72f0c9054ab4"
+      "bytes": 7420,
+      "sha256": "bb2a61b48c3494f7d7cece8250ed1dce5e816e0cc31db01e799cfd68634e2863"
     },
     "docs/annotation_validation.json": {
       "bytes": 1262,
       "sha256": "34a27f503fdca20e07df9924946026b95bf7af57977fce330f8c8daef74ee724"
+    },
+    "docs/cleanup_validation.json": {
+      "bytes": 2589,
+      "sha256": "45b5edd23f9f645b4a2467ab4ea3556dcbbeb5a67e39fa0f97dcf5a4eacb84f3"
     },
     "docs/smoke_validation.json": {
       "bytes": 6438,
@@ -186,8 +194,8 @@
       "sha256": "e324350f73536d1e5ab13f7ff83aec73ecb9b0c1a94587db4615e6d2e0c101b6"
     },
     "pyproject.toml": {
-      "bytes": 706,
-      "sha256": "c13f0e6053bbf7e14537421d28f7300079c9fc970b9da8757ce4f260b6e92b91"
+      "bytes": 776,
+      "sha256": "b235a8cdee15a55f2a1e3b31b60e4951d60975792f74061f6088abab27a64501"
     },
     "scripts/export_annotations.py": {
       "bytes": 1956,
@@ -198,8 +206,8 @@
       "sha256": "0e8936bcb1d18404603aac51b78ad1609db3c96b2b4d483d1948c49cc3460383"
     },
     "scripts/package_release.py": {
-      "bytes": 3603,
-      "sha256": "f429cc8c4e6af1743bdce9f574d010de7787a1c77aaad7950d6d296cef5aa54f"
+      "bytes": 3613,
+      "sha256": "f699254ae7b477deb58fe850de07d1c51c08d1424bfd18decb40f941698ac9cf"
     },
     "scripts/port_source.py": {
       "bytes": 4718,
@@ -370,8 +378,8 @@
       "sha256": "39ef72313d9a741854b23260303712c44434e504f734d99ec2dbc06efe315eb5"
     },
     "src/legal_repro/contracts.py": {
-      "bytes": 3983,
-      "sha256": "54258a6f5a194b3b820fecd2ab69e2bc954b74ced22795eea3ff07174e1a41f4"
+      "bytes": 4329,
+      "sha256": "7451d835cf9c4e3d5d7f242b89cac051edb4094fe5f1b59134510acc2a073f5d"
     },
     "src/legal_repro/expert_agreement.py": {
       "bytes": 11782,
@@ -469,6 +477,10 @@
       "bytes": 6395,
       "sha256": "474d0b7ef42815f72036daf14872a42fe551d6066067391783f251d14f615d92"
     },
+    "tests/test_contracts.py": {
+      "bytes": 3878,
+      "sha256": "433b9f2553547d1f916e902f2b96869bcb0ca5822e1095a62e8c33f105019aaf"
+    },
     "tests/test_credentials.py": {
       "bytes": 807,
       "sha256": "b5f9229982083f2a959fa30dd75c07c5151b97d9ea5f0ac86d0d7bf560cc99f6"
@@ -504,6 +516,6 @@
   },
   "intended_remote": "https://github.com/TUMLegalTech/legal-context-compression-repro.git",
   "schema_version": 1,
-  "total_bytes": 18428115,
+  "total_bytes": 18440243,
   "visibility": "public"
 }

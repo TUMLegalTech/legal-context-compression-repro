@@ -8,7 +8,7 @@ import subprocess
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-TOP=('.env.example','.gitignore','.gitattributes','.python-version','AGENTS.md','README.md',
+TOP=('.env.example','.gitignore','.gitattributes','.python-version','AGENTS.md','README.md','LICENSE',
      'THIRD_PARTY_NOTICES.md','CITATION.cff','pyproject.toml','package.json','package-lock.json','uv.lock')
 FOLDERS=('.github','docs','figures','human_evaluation','participant_apps','prompts','scripts','src/legal_repro','tests')
 

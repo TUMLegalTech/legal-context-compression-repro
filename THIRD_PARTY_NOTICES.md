@@ -1,5 +1,11 @@
 # Attribution and rights
 
+The original code is licensed under the [MIT License](LICENSE). The repository's
+license metadata refers to that code; it does not relicense bundled datasets,
+frozen experiment evidence, human annotations, or third-party components.
+The existing `mpriorust` attribution is provisional. The maintainer will supply
+the final citation author list and copyright-holder name.
+
 The bundled evaluation questions, Gold answers and supplied statute contexts
 derive from [DomainLLM/gerlayqa-bgb-paraphrased](https://huggingface.co/datasets/DomainLLM/gerlayqa-bgb-paraphrased),
 revision `fb8038ff4d7b1caaab2b88230f7821d9e09542c4`. Its dataset card declares
@@ -19,7 +25,6 @@ Matplotlib supplies the STIXGeneral font used in generated figures. Python and
 Node dependencies retain their respective upstream licenses. Publisher LaTeX
 classes, bibliography styles and unrelated paper assets are not included.
 
-The owner authorized public publication in the TUMLegalTech GitHub organization
-on 9 September 2026. This publication does not assign a new blanket open-source
-license to the original research code or machine-generated evidence. Existing
-component-specific licenses and attribution requirements remain unchanged.
+Existing component-specific licenses and attribution requirements remain in
+effect for bundled material. The license and this notice are included in the
+source release and installed wheel.

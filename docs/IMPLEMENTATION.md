@@ -67,3 +67,71 @@ The top-level prompt index links to the five existing runtime prompt files and
 two teacher templates copied from the accepted original evidence. Their bytes
 and source paths are recorded separately in `assets/prompts/SOURCES.json`;
 the teacher is documented but is not added to hosted execution.
+
+## Development checks
+
+The supported installation is the source checkout with `uv sync --frozen`.
+The wheel contains all runtime assets, the code license and third-party notices.
+Development checks use Node 22/jsdom; the participant HTML apps have no external
+JavaScript dependencies. Linux with Python 3.12 is the validated runtime;
+DOM tests do not establish behavior in every real browser.
+
+```bash
+npm ci --ignore-scripts --no-audit --no-fund
+uv run --frozen pytest -q
+uv build --wheel --out-dir outputs/wheel-1
+```
+
+CI checks offline evidence and synthetic transport behavior. It does not read
+API keys or run models. `scripts/validate_installed.py` additionally exercises a
+separately installed wheel with network and source-checkout access blocked.
+Use a fresh output directory for every validation build.
+
+## Create a new annotation study
+
+The preserved [participant ZIPs](../participant_apps/) can be opened without any
+installation or API key. Send only a participant ZIP, never this full repository
+or an analyst directory, to an annotator. Their downloaded JSON contains their
+judgments; the HTML/ZIP itself does not acquire saved annotations.
+
+Rebuild a new pairwise study and its separate private linkage key:
+
+```bash
+uv run --frozen legal-repro expert build --output outputs/pairwise-1 --private-output outputs/pairwise-key-1 --panel pairwise
+uv run --frozen legal-repro expert build --output outputs/four-1 --private-output outputs/four-key-1 --panel four-contexts --seed-from outputs/pairwise-key-1/linkage.json
+uv run --frozen legal-repro expert dual-build --output outputs/dual-1 --private-output outputs/dual-key-1 --seed-from outputs/four-key-1/linkage.json
+```
+
+This samples 100 questions with a new private seed; the later commands retain
+that same sample. The original distributed ZIPs remain unchanged. Their original
+private keys are intentionally absent, so returns from those original ZIPs must
+be linked by the original study organizer.
+
+`legal-repro expert link --help` links a single return. `dual-join --help`
+compares two final returns. The dual study preserves separate identities,
+independently randomized labels, finalization locks, post-submission feedback,
+and an offline organizer page. Ties, drafts, abstentions and missing returns
+remain distinct. Do not count synthetic tests as human evaluations.
+
+## Release maintenance
+
+Export scripts preserve source lineage and are not required to reproduce the
+public results. Re-export only from an explicitly reviewed source snapshot into
+a fresh scaffold. Keep existing evidence, participant ZIPs and validation receipts.
+
+API contracts created by `legal-repro contract` have no GitHub destination fields.
+The legacy `--action publish` and `scripts/publish_private.py` remain available
+only for the original private publication workflow, with their strict destination
+checks intact. They do not publish to the public organization repository.
+Public publication uses a separate approved contract for
+`TUMLegalTech/legal-context-compression-repro` and preserves the private origin.
+
+`scripts/package_release.py` creates an allowlisted archive and release manifest;
+use a fresh archive path and `--refresh-manifest` for a reviewed update. Inspect
+staged files and archive bytes before publication. Tag the validated release as
+`v0.1.0`; subsequent changes use new commits/releases, without moving that tag.
+
+The existing `mpriorust` attribution is provisional. Replace the author entry in
+`CITATION.cff` and copyright holder in `LICENSE` when the final names are supplied.
+Add affiliations or ORCIDs only from the authors. Code license metadata refers
+to MIT; third-party material keeps the terms documented in `THIRD_PARTY_NOTICES.md`.

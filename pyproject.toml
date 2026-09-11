@@ -6,6 +6,8 @@ build-backend = "setuptools.build_meta"
 name = "legal-context-compression-repro"
 version = "0.1.0"
 description = "Frozen-evidence reconstruction and one-key hosted replication of German legal context compression"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
 requires-python = ">=3.12,<3.13"
 dependencies = ["numpy==2.2.6", "matplotlib==3.10.0", "tokenizers==0.22.2"]
 

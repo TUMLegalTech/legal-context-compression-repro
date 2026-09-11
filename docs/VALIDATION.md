@@ -1,5 +1,28 @@
 # Release validation
 
+## Minimal publication cleanup: 11 September 2026
+
+- **145 tests passed**, including 11 new cases for API contracts without GitHub
+  fields, legacy contract metadata and resume behavior, rejection before credential
+  access, and unchanged restrictions on the legacy private-publication action.
+- A wheel installed with the locked runtime dependencies rebuilt all four figures,
+  the 9,468-answer viewer and the human reports with network and source-checkout
+  access blocked. The three plotted CSVs and the published human HTML/CSV/JSON
+  rebuilt byte-for-byte. No model requests or source reads were attempted.
+- All **32 original packaged assets** and all 60 protected evidence/reference files
+  remain unchanged, including `prompts/en/README.md` and the original figures.
+- Both API dry runs and the documented contract options passed with credential
+  and network access blocked. Generated validation contracts remained inactive.
+  Task counts remain 18 for the smoke and 28,551 for the full evaluation.
+- The README has 115 lines, with complete clone/setup and API execution examples.
+  Local documentation links, heading anchors and Bash syntax were checked.
+  Citation metadata passed the official CFF 1.2.0 schema. The MIT code license and
+  third-party notices were verified inside the wheel; attribution remains provisional.
+
+See [cleanup_validation.json](cleanup_validation.json) for the validation receipt.
+This is an offline release check, with no new paid smoke or full API evaluation.
+Historical receipts below describe their original revisions and remain unchanged.
+
 ## Annotator and prompt addition: 11 September 2026
 
 - **134 tests passed**, including an independent check that text-based annotation
