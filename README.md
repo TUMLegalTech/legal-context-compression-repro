@@ -13,6 +13,8 @@ original local model revisions, quantization, or identical answers.
 | Find in this release | Link |
 | --- | --- |
 | Exact generation, scoring, ranking and training-teacher prompts | [Prompt index](prompts/README.md) |
+| English reference translations of prompts and annotator instructions | [English translations](prompts/en/README.md) |
+| English translations of annotator notes, with German originals | [Bilingual notes](human_evaluation/en/README.md) |
 | Both annotators' answers, notes and agreement analysis | [Human evaluation](human_evaluation/README.md) |
 | Original result figures and plotted values | [Figures](figures/) |
 | Model settings and hosted reproduction boundary | [Protocol](docs/PROTOCOL.md) |

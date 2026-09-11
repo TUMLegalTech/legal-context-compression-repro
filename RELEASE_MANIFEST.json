@@ -1,5 +1,5 @@
 {
-  "file_count": 122,
+  "file_count": 125,
   "files": {
     ".env.example": {
       "bytes": 20,
@@ -30,8 +30,8 @@
       "sha256": "61278db527d3678c39308589df0fe40e7d5f52c60a9b454a7bd680fcb59006db"
     },
     "README.md": {
-      "bytes": 9205,
-      "sha256": "04255e4d005a28354e0d8afeefdd3f45863e9f7c9d3623d3770f140e1e94e1b3"
+      "bytes": 9443,
+      "sha256": "133021f1f266f8507ed51e6d208346837a934f236defc643bbfe6b891c4d4bbd"
     },
     "THIRD_PARTY_NOTICES.md": {
       "bytes": 1678,
@@ -138,8 +138,16 @@
       "sha256": "5c94c308921b0037d1c9d4680abff10b2ec15fded2ad06a8875432398356d0bb"
     },
     "human_evaluation/README.md": {
-      "bytes": 4069,
-      "sha256": "6401279b40165564a931fb7364b08ccbf6ca7351cd93a5845a8724217eb27c9d"
+      "bytes": 4395,
+      "sha256": "b40356646e5e0db8b01435ca6e2ce673c9a151479de008e55fd36605015a22c8"
+    },
+    "human_evaluation/en/README.md": {
+      "bytes": 14777,
+      "sha256": "84882028c1179a933603f26e3d9f19db90c5bc053a5b75fa577f295846267447"
+    },
+    "human_evaluation/en/notes.csv": {
+      "bytes": 11110,
+      "sha256": "6107ee578c4c2c443528a6abdbf3c8fabc62cc1244563d29d28678df6fc5e7f9"
     },
     "human_evaluation/index.html": {
       "bytes": 1335429,
@@ -170,8 +178,12 @@
       "sha256": "759080502d681b0fe8bca65e3118a182ac4be2f5ab12c214f05c555f5dae3f81"
     },
     "prompts/README.md": {
-      "bytes": 3749,
-      "sha256": "f5b1e797d53241c31cc9ff34f063ecaf9fa4f58be600322f540c6f8a7ba07221"
+      "bytes": 4476,
+      "sha256": "686be59866a77cb1778e9f4c5cf0b7ee6d3a69206b09ac48922f0908c104cde5"
+    },
+    "prompts/en/README.md": {
+      "bytes": 11813,
+      "sha256": "e324350f73536d1e5ab13f7ff83aec73ecb9b0c1a94587db4615e6d2e0c101b6"
     },
     "pyproject.toml": {
       "bytes": 706,
@@ -492,6 +504,6 @@
   },
   "intended_remote": "https://github.com/TUMLegalTech/legal-context-compression-repro.git",
   "schema_version": 1,
-  "total_bytes": 18389124,
+  "total_bytes": 18428115,
   "visibility": "public"
 }

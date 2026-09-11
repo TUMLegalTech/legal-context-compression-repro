@@ -5,13 +5,17 @@ runner reads the answer-generation and evaluation files directly; there is no
 separate copy to keep in sync. Their original evidence paths and SHA-256 values
 are recorded in [SOURCES.json](../src/legal_repro/assets/prompts/SOURCES.json).
 
-| Stage | Exact text | Message role / purpose |
-| --- | --- | --- |
-| Answer generation | [qa_user.txt](../src/legal_repro/assets/prompts/qa_user.txt) | One `user` message for every context condition |
-| Pointwise scoring | [score_developer.txt](../src/legal_repro/assets/prompts/score_developer.txt), [score_user.txt](../src/legal_repro/assets/prompts/score_user.txt) | `system` instructions, then `user` question, Gold and one answer |
-| Four-answer ranking | [rank_developer.txt](../src/legal_repro/assets/prompts/rank_developer.txt), [rank_user.txt](../src/legal_repro/assets/prompts/rank_user.txt) | `system` instructions, then `user` question, Gold and four blinded answers |
-| Training teacher | [teacher_developer.txt](../src/legal_repro/assets/prompts/teacher_developer.txt), [teacher_user.txt](../src/legal_repro/assets/prompts/teacher_user.txt) | Original essential/supporting text-unit labeling instructions and training input template; archived for methods reference |
-| Human annotation | [instructions.txt](../src/legal_repro/assets/human_evaluation/instructions.txt), [START_HERE.txt](../src/legal_repro/assets/human_evaluation/START_HERE.txt) | Exact instruction text extracted from both distributed annotator packages; ZIP instructions preserved byte-for-byte |
+[English reference translations](en/README.md) are available for all texts below.
+The experiments and reproduction runner use the German originals; the English
+versions are provided for reading and citation.
+
+| Stage | Exact German text | English reference | Message role / purpose |
+| --- | --- | --- | --- |
+| Answer generation | [qa_user.txt](../src/legal_repro/assets/prompts/qa_user.txt) | [Translation](en/README.md#answer-generation) | One `user` message for every context condition |
+| Pointwise scoring | [score_developer.txt](../src/legal_repro/assets/prompts/score_developer.txt), [score_user.txt](../src/legal_repro/assets/prompts/score_user.txt) | [Instructions](en/README.md#pointwise-scoring-instructions), [input](en/README.md#pointwise-scoring-input) | `system` instructions, then `user` question, Gold and one answer |
+| Four-answer ranking | [rank_developer.txt](../src/legal_repro/assets/prompts/rank_developer.txt), [rank_user.txt](../src/legal_repro/assets/prompts/rank_user.txt) | [Instructions](en/README.md#four-answer-ranking-instructions), [input](en/README.md#four-answer-ranking-input) | `system` instructions, then `user` question, Gold and four blinded answers |
+| Training teacher | [teacher_developer.txt](../src/legal_repro/assets/prompts/teacher_developer.txt), [teacher_user.txt](../src/legal_repro/assets/prompts/teacher_user.txt) | [Instructions](en/README.md#training-teacher-instructions), [input](en/README.md#training-teacher-input) | Original essential/supporting text-unit labeling instructions and training input template; archived for methods reference |
+| Human annotation | [instructions.txt](../src/legal_repro/assets/human_evaluation/instructions.txt), [START_HERE.txt](../src/legal_repro/assets/human_evaluation/START_HERE.txt) | [Application](en/README.md#human-annotation-instructions), [ZIP](en/README.md#annotator-zip-instructions) | Exact instruction text extracted from both distributed annotator packages; ZIP instructions preserved byte-for-byte |
 
 ## Answer generation
 

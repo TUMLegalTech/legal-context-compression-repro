@@ -10,6 +10,8 @@ notes, reference-answer concerns and abstentions, are retained.
 - [Recomputed agreement](summary.json): human–human and each human–LLM comparison.
 - [Canonical annotation data](../src/legal_repro/assets/human_evaluation/annotations.json): original selected ranks and labels, tied groups, notes, dispositions and answer identities.
 - [Original annotator instructions](../src/legal_repro/assets/human_evaluation/instructions.txt) and [ZIP instructions](../src/legal_repro/assets/human_evaluation/START_HERE.txt).
+- English reference translations: [application instructions](../prompts/en/README.md#human-annotation-instructions) and [ZIP instructions](../prompts/en/README.md#annotator-zip-instructions).
+- [English translations of all 31 nonempty annotator notes](en/README.md), with German originals and a [bilingual CSV](en/notes.csv).
 
 ## Reproduce the analysis
 
