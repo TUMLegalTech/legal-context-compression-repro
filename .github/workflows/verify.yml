@@ -22,5 +22,6 @@ jobs:
       - run: uv run --frozen pytest -q
       - run: uv run --frozen legal-repro verify --receipt outputs/verification.json
       - run: uv run --frozen legal-repro figures --output outputs/figures
+      - run: uv run --frozen legal-repro human --output outputs/human-evaluation
       - run: uv run --frozen legal-repro evaluate --dry-run
       - run: uv build --wheel --out-dir outputs/wheel

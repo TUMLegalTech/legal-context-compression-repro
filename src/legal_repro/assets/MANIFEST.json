@@ -8,6 +8,18 @@
       "bytes": 11544117,
       "sha256": "07374ffa46f691de4ecebf332f25eddf20033c7f3b96a9e8a33d037e05a45eff"
     },
+    "human_evaluation/START_HERE.txt": {
+      "bytes": 2300,
+      "sha256": "fb2e72a64cd99045341f6530007f19c9e025267d7f8d39b215de8f5f1710300d"
+    },
+    "human_evaluation/annotations.json": {
+      "bytes": 195491,
+      "sha256": "9f5c2b1ffa5200da69c673189c936065f03190b4ea05badbca71557e1fb308af"
+    },
+    "human_evaluation/instructions.txt": {
+      "bytes": 1575,
+      "sha256": "55beaafe2e0643c6408732e9fb7c8c37a71fa20d105049ee71d8a33b44df64ae"
+    },
     "paper/MANIFEST.json": {
       "bytes": 2339,
       "sha256": "8cb3810823bbeb165025f8b4f543a89ede08d9c24d37c161a3364618cd658a31"
@@ -23,6 +35,10 @@
     "paper/evidence/ranking_summary.json": {
       "bytes": 17932,
       "sha256": "e85623046fab410650f9a6b87fbe324c7fad17abf97d708b41e2a4e36dbf2971"
+    },
+    "prompts/SOURCES.json": {
+      "bytes": 1876,
+      "sha256": "15d327893fb40d795d9a95065a8a96067ee9426fc1f9c39e768fb673e26c5858"
     },
     "prompts/qa_user.txt": {
       "bytes": 1092,
@@ -43,6 +59,14 @@
     "prompts/score_user.txt": {
       "bytes": 97,
       "sha256": "b3b6f0ad95e555da676da8a120ed883bdc5b78d4983a10a807abec9cca277c5c"
+    },
+    "prompts/teacher_developer.txt": {
+      "bytes": 849,
+      "sha256": "897914e6691c40340de9cb52a0c880909917f2bf486a174f3205f0dabb3742b1"
+    },
+    "prompts/teacher_user.txt": {
+      "bytes": 129,
+      "sha256": "e8b203e99c3527ff02694e6dbcc76262a5392cb3a351a6e810a701f66dbc6ec1"
     },
     "protocol.json": {
       "bytes": 2446,

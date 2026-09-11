@@ -1,5 +1,32 @@
 # Release validation
 
+## Annotator and prompt addition: 11 September 2026
+
+- **134 tests passed**, including an independent check that text-based annotation
+  alignment gives the same results as the original private-key join on synthetic
+  fixtures, tie/abstention handling, rejected ambiguous matches and safe HTML export.
+- Both real final returns match their distributed packets. The published subset
+  retains all 200 judgments over 100 questions (90 context clusters): 196 ranked
+  judgments and four ungradable judgments, with 96 jointly ranked questions.
+  Each annotator's cached LLM agreement was recomputed from the frozen answers.
+- The public HTML, 200-row CSV and JSON summary rebuild byte-for-byte from the
+  packaged annotation data. Seven prompt templates match their recorded original
+  evidence hashes. The five previously released runtime prompts are unchanged.
+- All **26 original packaged evidence assets** remain byte-identical. The current
+  manifest adds six assets: three annotation/instruction files, two teacher
+  templates and the prompt-source record.
+- The wheel was installed into a fresh Python 3.12.11 environment. The acceptance
+  check blocked network access, both source-code trees and local key-file paths;
+  it rebuilt the figures, saved-answer viewer, human analysis and synthetic study
+  apps with zero attempted source reads and zero model requests. Hosted task
+  counts remain unchanged.
+
+See [annotation_validation.json](annotation_validation.json) for the compact
+validation receipt. These are offline checks; no new hosted model test or full
+API evaluation was run for this addition.
+
+## Initial release and hosted smoke
+
 Validated locally on 9 September 2026 using Python 3.12.11, uv 0.9.0,
 NumPy 2.2.6, Matplotlib 3.10.0, and the committed dependency locks.
 

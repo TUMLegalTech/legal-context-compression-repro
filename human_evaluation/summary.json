@@ -1,0 +1,110 @@
+{
+  "kind": "published_human_evaluation",
+  "question_count": 100,
+  "context_cluster_count": 90,
+  "counts": {
+    "annotator_1": {
+      "ranked": 99,
+      "ungradable": 1,
+      "reference_issues": 3,
+      "with_notes": 26
+    },
+    "annotator_2": {
+      "ranked": 97,
+      "ungradable": 3,
+      "reference_issues": 3,
+      "with_notes": 5
+    }
+  },
+  "agreement": {
+    "annotator_1_vs_llm": {
+      "compared_questions": 99,
+      "excluded_questions": 1,
+      "focus_matrix": [
+        [
+          15,
+          15,
+          9
+        ],
+        [
+          4,
+          9,
+          3
+        ],
+        [
+          9,
+          21,
+          14
+        ]
+      ],
+      "focus_exact_agreement": 0.3838383838383838,
+      "focus_linear_weighted_kappa": 0.13969860301396975,
+      "focus_preference_reversal_rate": 0.18181818181818182,
+      "left_favourable_rate": 0.6060606060606061,
+      "right_favourable_rate": 0.7171717171717171,
+      "right_minus_left_favourable_pp": 11.11111111111111,
+      "complete_ranking_agreement": 0.0707070707070707,
+      "all_pairwise_agreement": 0.5404040404040404
+    },
+    "annotator_2_vs_llm": {
+      "compared_questions": 97,
+      "excluded_questions": 3,
+      "focus_matrix": [
+        [
+          15,
+          16,
+          1
+        ],
+        [
+          7,
+          15,
+          14
+        ],
+        [
+          4,
+          14,
+          11
+        ]
+      ],
+      "focus_exact_agreement": 0.422680412371134,
+      "focus_linear_weighted_kappa": 0.24033893953010665,
+      "focus_preference_reversal_rate": 0.05154639175257732,
+      "left_favourable_rate": 0.6701030927835051,
+      "right_favourable_rate": 0.7319587628865979,
+      "right_minus_left_favourable_pp": 6.185567010309279,
+      "complete_ranking_agreement": 0.1134020618556701,
+      "all_pairwise_agreement": 0.5532646048109966
+    },
+    "annotator_1_vs_annotator_2": {
+      "compared_questions": 96,
+      "excluded_questions": 4,
+      "focus_matrix": [
+        [
+          19,
+          6,
+          11
+        ],
+        [
+          3,
+          11,
+          2
+        ],
+        [
+          10,
+          18,
+          16
+        ]
+      ],
+      "focus_exact_agreement": 0.4791666666666667,
+      "focus_linear_weighted_kappa": 0.2147465437788016,
+      "focus_preference_reversal_rate": 0.21875,
+      "left_favourable_rate": 0.625,
+      "right_favourable_rate": 0.6666666666666666,
+      "right_minus_left_favourable_pp": 4.166666666666667,
+      "complete_ranking_agreement": 0.0625,
+      "all_pairwise_agreement": 0.5451388888888888
+    }
+  },
+  "inference": "Descriptive agreement; clustered uncertainty and equivalence are not established.",
+  "live_model_requests": 0
+}

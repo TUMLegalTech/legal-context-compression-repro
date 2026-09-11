@@ -1,0 +1,40 @@
+{
+  "source": "accepted original report_evidence prompt files",
+  "files": {
+    "qa_user.txt": {
+      "source_artifact": "results/legal-pruning-minimal-run-20260905T072343Z/report_evidence/prompts/qa_user.txt",
+      "bytes": 1092,
+      "sha256": "d17ab9e8710e027f8c2f21603d9627f993ade1eb5296ccb611bd58673628ba96"
+    },
+    "rank_developer.txt": {
+      "source_artifact": "results/legal-pruning-minimal-run-20260905T072343Z/report_evidence/prompts/rank_developer.txt",
+      "bytes": 1071,
+      "sha256": "33069a3044a0ee1f7ecf2b39ac5299c548213acb244ffc6a939a5b48d8a89e56"
+    },
+    "rank_user.txt": {
+      "source_artifact": "results/legal-pruning-minimal-run-20260905T072343Z/report_evidence/prompts/rank_user.txt",
+      "bytes": 121,
+      "sha256": "580a2b0f5ef383ad892c291ce7e20791cbcbafb615af8605d8f24259a1fcb3e2"
+    },
+    "score_developer.txt": {
+      "source_artifact": "results/legal-pruning-minimal-run-20260905T072343Z/report_evidence/prompts/score_developer.txt",
+      "bytes": 1127,
+      "sha256": "45d36a648ac9d6dac69867a8087503b5acf5d1b88cf576ca498f058fd27d3248"
+    },
+    "score_user.txt": {
+      "source_artifact": "results/legal-pruning-minimal-run-20260905T072343Z/report_evidence/prompts/score_user.txt",
+      "bytes": 97,
+      "sha256": "b3b6f0ad95e555da676da8a120ed883bdc5b78d4983a10a807abec9cca277c5c"
+    },
+    "teacher_developer.txt": {
+      "source_artifact": "results/legal-pruning-minimal-run-20260905T072343Z/report_evidence/prompts/teacher_developer.txt",
+      "bytes": 849,
+      "sha256": "897914e6691c40340de9cb52a0c880909917f2bf486a174f3205f0dabb3742b1"
+    },
+    "teacher_user.txt": {
+      "source_artifact": "results/legal-pruning-minimal-run-20260905T072343Z/report_evidence/prompts/teacher_user.txt",
+      "bytes": 129,
+      "sha256": "e8b203e99c3527ff02694e6dbcc76262a5392cb3a351a6e810a701f66dbc6ec1"
+    }
+  }
+}

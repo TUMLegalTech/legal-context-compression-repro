@@ -1,0 +1,15 @@
+So funktioniert die Bewertung
+
+Lesen Sie die Frage und die Referenzantwort. Die Referenz ist keine fünfte Kandidatenantwort.
+
+Bewerten Sie die vier Antworten nach rechtlichem Ergebnis, Herleitung/Subsumtion und Rechtsgrundlagen. Stil und Länge sollen die Rangfolge nicht bestimmen.
+
+Wählen Sie unter jeder Antwort einen Rang: 1 = beste Antwort, 4 = schlechteste. Derselbe Rang ist mehrfach erlaubt und bedeutet Gleichstand. Mindestens eine Antwort muss Rang 1 erhalten.
+
+Bestätigen Sie die Bewertung. Sie können Fälle überspringen und später zurückkehren. Bei mangelnder Beurteilbarkeit wählen Sie die entsprechende Option und begründen dies.
+
+Laden Sie am Ende Ihre Ergebnisdatei herunter und senden Sie sie an die Studienleitung.
+
+Die Buchstaben sind neutrale, je Fall neu zugewiesene Kennzeichnungen. Wenn die Referenz zweifelhaft ist, markieren und erläutern Sie dies bitte gesondert. Nutzen Sie nur dieses Paket während der Bewertung.
+
+Bewerten Sie ausschließlich relativ zur Referenz, ohne externe Quellen oder eigene abweichende Rechtsauffassungen einzubeziehen. Gleichstand bedeutet gleiche rechtliche Qualität, nicht Unsicherheit. Beispiel: A und B gleich gut, danach C, danach D → 1, 1, 2, 3. Alle gleich gut → 1, 1, 1, 1. Eine kurze Begründung unter „Anmerkung“ hilft bei der späteren Auswertung. Arbeiten Sie unabhängig und tauschen Sie sich erst nach beiden endgültigen Abgaben aus. Die LLM-Übersicht erscheint erst nach dem gesonderten endgültigen Abschluss; danach sind Bewertungen gesperrt. Bitte vorher keinen Quelltext ansehen.

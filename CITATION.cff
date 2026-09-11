@@ -6,4 +6,4 @@ authors:
 type: software
 version: 0.1.0
 url: "https://github.com/TUMLegalTech/legal-context-compression-repro"
-abstract: "Offline figure reconstruction and one-key hosted answer/judge replication using frozen compressed statutory contexts."
+abstract: "Offline figure reconstruction, published human annotations and exact prompts, with one-key hosted answer/judge replication using frozen compressed statutory contexts."

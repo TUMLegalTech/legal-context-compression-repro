@@ -32,8 +32,10 @@ recomputed before figure building; the frozen companion confidence-interval CSV
 is preserved. New full API runs use the original statistical kernels and counts.
 
 The participant ZIPs are byte-identical copies of the two distributed originals.
-New studies generate fresh private keys. Analyst material and actual human
-judgments are not published. The existing two-reviewer extension is retained,
+New studies generate fresh private keys. Private linkage keys are not published.
+The owner's 11 September addition publishes an anonymous scientific subset of
+both finalized human returns; the original exports and study keys stay local.
+The existing two-reviewer extension is retained,
 including its synthetic completion/organizer tests.
 
 The release intentionally excludes compressor implementations, training data,
@@ -44,3 +46,24 @@ than a source-level reproduction of compressor training.
 Maintainer export tools read an explicit allowlist; normal release commands and
 installed-wheel validation have no dependency on the source checkout. Re-export
 only into a fresh scaffold, then review all differences before resealing assets.
+
+## Human judgments and prompt references
+
+The addition binds 200 returned judgments to the same 100 questions and four
+answer conditions using exact question/Gold/answer-text matches. Export rejects
+missing or ambiguous matches, altered distributed packets, unfinished returns
+and mismatched LLM feedback. All scientific response fields are preserved;
+timestamps and internal submission identifiers are omitted. The original
+browser feedback is independently recomputed and checked during export.
+
+The public analysis reuses the study's tie validation, occupied midranks and
+question-weighted agreement calculations. It retains ungradable cases in the
+data and uses the appropriate complete-case denominator for each comparison.
+Success requires the published CSV, HTML and summary to rebuild identically,
+the original evaluation/figure evidence to remain unchanged, and the installed
+wheel to work without the source checkout, credentials or network.
+
+The top-level prompt index links to the five existing runtime prompt files and
+two teacher templates copied from the accepted original evidence. Their bytes
+and source paths are recorded separately in `assets/prompts/SOURCES.json`;
+the teacher is documented but is not added to hosted execution.

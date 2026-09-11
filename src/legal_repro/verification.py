@@ -92,10 +92,15 @@ def verify():
                     counts[f'compressed_{"above" if delta<0 else "below" if delta>0 else "tied"}_{control}']+=1
             if {'rows':len(selected),**counts} != summary[block][candidate]:
                 raise ValueError('Recomputed ranking block differs from paper')
+    from .human import analyze
+    human = analyze(payload=payload)
     return {'accepted':True, 'kind':'offline_reconstruction', 'asset_files_verified':asset_count,
             'questions':526,'conditions':18,'reference_answers':9468,'primary_scores':9468,
             'score_repeats':936,'primary_rankings':7890,'ranking_repeats':789,
             'score_means_recomputed':54,'compression_fractions_recomputed':15,
             'retained_rows_with_downstream_token_expansion':token_expansions,
             'max_score_mean_error':max(differences),'ranking_blocks_verified':[128,398,526],
+            'human_questions':human['question_count'],
+            'human_judgments':sum(c['ranked']+c['ungradable'] for c in human['counts'].values()),
+            'human_jointly_ranked_questions':human['agreement']['annotator_1_vs_annotator_2']['compared_questions'],
             'live_model_requests':0}

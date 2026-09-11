@@ -31,6 +31,7 @@ from legal_repro import expert_review,expert_agreement,review_bundle
 from legal_repro.build_figures import build
 from legal_repro.planning import plan
 from legal_repro.verification import verify
+from legal_repro.human import build as build_human
 from legal_repro.io import write_new
 
 package=Path(legal_repro.__file__).resolve()
@@ -41,6 +42,7 @@ root.mkdir(parents=True,exist_ok=False)
 verification=verify()
 figure_receipt=build(root/'figures')
 view=review_bundle.build(root/'viewer')
+human=build_human(root/'human-evaluation')
 pair=expert_review.build(root/'pairwise',root/'pairwise-key',panel='pairwise')
 four=expert_review.build(root/'four',root/'four-key',panel='four-contexts',seed_from=root/'pairwise-key/linkage.json')
 dual=expert_agreement.build_study(root/'dual',root/'dual-key',root/'four-key/linkage.json')
@@ -51,6 +53,8 @@ receipt={'accepted':True,'kind':'isolated_installed_wheel_offline','python':sys.
                     'ranking_segments':figure_receipt['ranking_segments_verified'],'csv_sha256':{k:v for k,v in figure_receipt['output_sha256'].items() if k.startswith('data/')}},
          'viewer':{'questions':view['questions'],'answers':view['answers']},
          'participant_zip_paths':[pair['send_this_zip'],four['send_this_zip'],*dual['annotator_zips'].values()],
-         'human_judgments_created':0,'full_plan':plan('evaluate')['counts']}
+         'human_judgments_created':0,'published_human_questions':human['question_count'],
+         'published_human_jointly_ranked':human['agreement']['annotator_1_vs_annotator_2']['compared_questions'],
+         'full_plan':plan('evaluate')['counts']}
 write_new(root/'ACCEPTANCE.json',receipt)
 print(json.dumps(receipt,indent=2))

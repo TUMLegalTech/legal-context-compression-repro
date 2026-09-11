@@ -1,17 +1,17 @@
 {
-  "file_count": 107,
+  "file_count": 122,
   "files": {
     ".env.example": {
       "bytes": 20,
       "sha256": "047e097256db4922a2580079650ee76a7d2b50a34490728938f4708e6ebd7018"
     },
     ".gitattributes": {
-      "bytes": 120,
-      "sha256": "ae420c263fe7540d43309c0eb11765b38c1d53438bded367d43238245db95809"
+      "bytes": 160,
+      "sha256": "f1260039eba7dcd038c9963e61f60837263f2353d8f4936a068518f45f36529c"
     },
     ".github/workflows/verify.yml": {
-      "bytes": 850,
-      "sha256": "e8c97f679dc4e4875ed402207661540ef2c96dcd65725817fb37bd341489f139"
+      "bytes": 931,
+      "sha256": "2284cf74dac34d32a5934528a30c316faf13cad58c17cddfeb29507dbc865954"
     },
     ".gitignore": {
       "bytes": 173,
@@ -22,16 +22,16 @@
       "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
     },
     "AGENTS.md": {
-      "bytes": 1173,
-      "sha256": "24764cbf4804ab885a867d9d1473cc817180c9420f0dfad2ab1ffe09b85244dc"
+      "bytes": 1406,
+      "sha256": "654105be8ff307c5c06a7cd69135af609f4a535dbe863bc518207d902bb3e367"
     },
     "CITATION.cff": {
-      "bytes": 454,
-      "sha256": "51c692b0a7d20c7d79e40a6316f7a73edcb10eeef36be5d617764c2de6104848"
+      "bytes": 503,
+      "sha256": "61278db527d3678c39308589df0fe40e7d5f52c60a9b454a7bd680fcb59006db"
     },
     "README.md": {
-      "bytes": 7901,
-      "sha256": "3a049c59145810ce0bb3233c86638a8f937972f2158f6970ab0710af7797f47a"
+      "bytes": 9205,
+      "sha256": "04255e4d005a28354e0d8afeefdd3f45863e9f7c9d3623d3770f140e1e94e1b3"
     },
     "THIRD_PARTY_NOTICES.md": {
       "bytes": 1678,
@@ -42,8 +42,8 @@
       "sha256": "729177d1ae7aa0de137a0405c500ab60fa2bb5a8fb0e0305a22893b72cc63950"
     },
     "docs/IMPLEMENTATION.md": {
-      "bytes": 2938,
-      "sha256": "1988fb10facad049aac872216afad90cef152d306694d4c3b554c9713a46bdcd"
+      "bytes": 4321,
+      "sha256": "314877a865205927519c693ded2e039f82b9e6503d10dc2babde22f4b52c277a"
     },
     "docs/PROTOCOL.md": {
       "bytes": 3999,
@@ -54,8 +54,12 @@
       "sha256": "d7c1f3b0eba149f49c4de69159c0823341a5eef5a3584c1df5b25d74c3386b22"
     },
     "docs/VALIDATION.md": {
-      "bytes": 4192,
-      "sha256": "fc57b8893faf1b1d7a811c710f81616e7c1c0787f9834a0fc765ee876fdab4a1"
+      "bytes": 5837,
+      "sha256": "82cdd6a8a86ca616331d100fd851ccdefbe0af9819ced82b1ebf72f0c9054ab4"
+    },
+    "docs/annotation_validation.json": {
+      "bytes": 1262,
+      "sha256": "34a27f503fdca20e07df9924946026b95bf7af57977fce330f8c8daef74ee724"
     },
     "docs/smoke_validation.json": {
       "bytes": 6438,
@@ -133,6 +137,22 @@
       "bytes": 4550,
       "sha256": "5c94c308921b0037d1c9d4680abff10b2ec15fded2ad06a8875432398356d0bb"
     },
+    "human_evaluation/README.md": {
+      "bytes": 4069,
+      "sha256": "6401279b40165564a931fb7364b08ccbf6ca7351cd93a5845a8724217eb27c9d"
+    },
+    "human_evaluation/index.html": {
+      "bytes": 1335429,
+      "sha256": "74c9ad0ec828ea66832fc5bc944794a60e1c3343af397950bba226a20d4adcf4"
+    },
+    "human_evaluation/judgments.csv": {
+      "bytes": 59867,
+      "sha256": "2649a9e7421003afad9daa311c9e6a0a5886637c08d5d7304409077fb8c5a725"
+    },
+    "human_evaluation/summary.json": {
+      "bytes": 2728,
+      "sha256": "55665b96c2ecc69d651f3fe2d9ed92e227bb7851935e9d1ce7f5e792d1a1c23e"
+    },
     "package-lock.json": {
       "bytes": 52450,
       "sha256": "7d53ade72e6948c3e3e461b6db93cf37a51c9277e2755ed43a8bc594b4395a48"
@@ -149,17 +169,25 @@
       "bytes": 240938,
       "sha256": "759080502d681b0fe8bca65e3118a182ac4be2f5ab12c214f05c555f5dae3f81"
     },
+    "prompts/README.md": {
+      "bytes": 3749,
+      "sha256": "f5b1e797d53241c31cc9ff34f063ecaf9fa4f58be600322f540c6f8a7ba07221"
+    },
     "pyproject.toml": {
       "bytes": 706,
       "sha256": "c13f0e6053bbf7e14537421d28f7300079c9fc970b9da8757ce4f260b6e92b91"
+    },
+    "scripts/export_annotations.py": {
+      "bytes": 1956,
+      "sha256": "d766516f93a2d7f535a4efc488204c671fa612a241072b4099d486e5bc1d02c3"
     },
     "scripts/export_source.py": {
       "bytes": 9937,
       "sha256": "0e8936bcb1d18404603aac51b78ad1609db3c96b2b4d483d1948c49cc3460383"
     },
     "scripts/package_release.py": {
-      "bytes": 3559,
-      "sha256": "0224a9cfd900e2bc60d08ead12a40864a565a50a106a5e9bee6c3a305f6ce18c"
+      "bytes": 3603,
+      "sha256": "f429cc8c4e6af1743bdce9f574d010de7787a1c77aaad7950d6d296cef5aa54f"
     },
     "scripts/port_source.py": {
       "bytes": 4718,
@@ -174,8 +202,8 @@
       "sha256": "4b06845a69d3e056079657e6b8126d6f86e4f807821ac1efb48d8cb25f8d0faa"
     },
     "scripts/validate_installed.py": {
-      "bytes": 3047,
-      "sha256": "7a284c208097e43da0305b84d8739a8874c48ba7dd9bec3c62f943f72742a03d"
+      "bytes": 3317,
+      "sha256": "d4e9ad7d5ff0e52382ef11a073e1029da4cd33629d2c428ade39979343c28505"
     },
     "src/legal_repro/__init__.py": {
       "bytes": 92,
@@ -186,8 +214,8 @@
       "sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279"
     },
     "src/legal_repro/assets/MANIFEST.json": {
-      "bytes": 3784,
-      "sha256": "e8fba6ff3776f4719c34a336c1fd92057e481b9495ca7f3ee48b0963695da81b"
+      "bytes": 4680,
+      "sha256": "433edb353eae2facae9677be46bf59ffbb10fd325d572c4de330a5d03197ae79"
     },
     "src/legal_repro/assets/data/inputs.json.gz": {
       "bytes": 2319995,
@@ -196,6 +224,18 @@
     "src/legal_repro/assets/data/reference_results.json.gz": {
       "bytes": 11544117,
       "sha256": "07374ffa46f691de4ecebf332f25eddf20033c7f3b96a9e8a33d037e05a45eff"
+    },
+    "src/legal_repro/assets/human_evaluation/START_HERE.txt": {
+      "bytes": 2300,
+      "sha256": "fb2e72a64cd99045341f6530007f19c9e025267d7f8d39b215de8f5f1710300d"
+    },
+    "src/legal_repro/assets/human_evaluation/annotations.json": {
+      "bytes": 195491,
+      "sha256": "9f5c2b1ffa5200da69c673189c936065f03190b4ea05badbca71557e1fb308af"
+    },
+    "src/legal_repro/assets/human_evaluation/instructions.txt": {
+      "bytes": 1575,
+      "sha256": "55beaafe2e0643c6408732e9fb7c8c37a71fa20d105049ee71d8a33b44df64ae"
     },
     "src/legal_repro/assets/paper/MANIFEST.json": {
       "bytes": 2339,
@@ -212,6 +252,10 @@
     "src/legal_repro/assets/paper/evidence/ranking_summary.json": {
       "bytes": 17932,
       "sha256": "e85623046fab410650f9a6b87fbe324c7fad17abf97d708b41e2a4e36dbf2971"
+    },
+    "src/legal_repro/assets/prompts/SOURCES.json": {
+      "bytes": 1876,
+      "sha256": "15d327893fb40d795d9a95065a8a96067ee9426fc1f9c39e768fb673e26c5858"
     },
     "src/legal_repro/assets/prompts/qa_user.txt": {
       "bytes": 1092,
@@ -232,6 +276,14 @@
     "src/legal_repro/assets/prompts/score_user.txt": {
       "bytes": 97,
       "sha256": "b3b6f0ad95e555da676da8a120ed883bdc5b78d4983a10a807abec9cca277c5c"
+    },
+    "src/legal_repro/assets/prompts/teacher_developer.txt": {
+      "bytes": 849,
+      "sha256": "897914e6691c40340de9cb52a0c880909917f2bf486a174f3205f0dabb3742b1"
+    },
+    "src/legal_repro/assets/prompts/teacher_user.txt": {
+      "bytes": 129,
+      "sha256": "e8b203e99c3527ff02694e6dbcc76262a5392cb3a351a6e810a701f66dbc6ec1"
     },
     "src/legal_repro/assets/protocol.json": {
       "bytes": 2446,
@@ -302,8 +354,8 @@
       "sha256": "aea589d68c44bc1f3cdb2c195a1fd73cae475c41f1d8131caed1f9c403f4dfcc"
     },
     "src/legal_repro/cli.py": {
-      "bytes": 3992,
-      "sha256": "5b41f7c4d9d00e59c0db4692d00907b7ca1465311dcafa902e089e2da0126144"
+      "bytes": 4272,
+      "sha256": "39ef72313d9a741854b23260303712c44434e504f734d99ec2dbc06efe315eb5"
     },
     "src/legal_repro/contracts.py": {
       "bytes": 3983,
@@ -321,9 +373,13 @@
       "bytes": 3506,
       "sha256": "5bbf8d5faa940ff92119243e3c301119af00908d24e48fe3c50d74eb684b0697"
     },
+    "src/legal_repro/human.py": {
+      "bytes": 15634,
+      "sha256": "5f9d497945b67de58b37c3e0f2fe652c103ce524f7eddd9c32864fc3d9f0d28c"
+    },
     "src/legal_repro/integrity.py": {
       "bytes": 147,
-      "sha256": "41fc90e85c90176b704b2041f9c4d840ae1bc0985e05d6bc54163c8f13082b99"
+      "sha256": "416d3250415cf0d021e40083a7b43c103cb5ad1010a0e01943abb20cfba99f47"
     },
     "src/legal_repro/io.py": {
       "bytes": 1242,
@@ -382,8 +438,8 @@
       "sha256": "5937c443c85e8bbeddb1cb7b0f458ce2c2d96cd97863e00c0bd54e61bec2d26d"
     },
     "src/legal_repro/verification.py": {
-      "bytes": 6281,
-      "sha256": "98d9cf615c3b1e4cfcac88c22ee1ddddc765365efe7182b93d4fa958e02dd1fc"
+      "bytes": 6619,
+      "sha256": "838594bda73cd21cec3dea6cc96381ad9dddb8649c3d299c0a04d4a491ca3332"
     },
     "tests/expert_completion_dom.cjs": {
       "bytes": 10371,
@@ -421,6 +477,10 @@
       "bytes": 5441,
       "sha256": "9ee12b1dbf7d1231c9ca7445c203d66bf1639c8e014e52fe45f64fbcb321de49"
     },
+    "tests/test_published_human.py": {
+      "bytes": 5729,
+      "sha256": "3ba2a1576768ae860f30a8ccbd6c57d727eec6f206f210eab05d0cbdea0aead7"
+    },
     "tests/test_review_bundle.py": {
       "bytes": 10943,
       "sha256": "24c09cdecf40e4455300612f9b73e2fa6456475dfbc37e301626a9c882457af2"
@@ -432,6 +492,6 @@
   },
   "intended_remote": "https://github.com/TUMLegalTech/legal-context-compression-repro.git",
   "schema_version": 1,
-  "total_bytes": 16749918,
+  "total_bytes": 18389124,
   "visibility": "public"
 }

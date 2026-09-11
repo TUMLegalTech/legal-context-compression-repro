@@ -10,6 +10,16 @@ ranking extension. It does not retrain or rerun the compressors. An API rerun
 uses hosted versions of the original model families; it does not claim the
 original local model revisions, quantization, or identical answers.
 
+| Find in this release | Link |
+| --- | --- |
+| Exact generation, scoring, ranking and training-teacher prompts | [Prompt index](prompts/README.md) |
+| Both annotators' answers, notes and agreement analysis | [Human evaluation](human_evaluation/README.md) |
+| Original result figures and plotted values | [Figures](figures/) |
+| Model settings and hosted reproduction boundary | [Protocol](docs/PROTOCOL.md) |
+
+For paper references, use a [commit permalink](prompts/README.md#citing-these-artifacts)
+to the prompt index and annotation files. The paper itself is not bundled.
+
 ## Start with the offline checks
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run
@@ -20,6 +30,7 @@ uv sync --frozen
 uv run legal-repro verify
 uv run legal-repro figures --output outputs/figures-1
 uv run legal-repro review --output outputs/review-1
+uv run legal-repro human --output outputs/human-1
 ```
 
 Open `outputs/review-1/index.html` locally. It contains all 526 questions,
@@ -102,7 +113,19 @@ The full run also computes the original paired context-cluster contrasts using
 10,000 bootstrap replicates, 100,000 sign randomizations and family-wise Holm
 correction. This complete API workload is not part of release smoke verification.
 
-## Keep the human evaluation offline
+## Published human evaluation
+
+The [human evaluation](human_evaluation/README.md) publishes both finalized
+annotator returns as anonymous scientific data: **200 judgments on 100 questions**,
+including original ranks, ties, notes and four ungradable judgments. The
+[CSV](human_evaluation/judgments.csv) is directly readable on GitHub; download/open
+the [HTML report](human_evaluation/index.html) to inspect all question and answer
+texts locally. `legal-repro human` rebuilds the report and agreement statistics
+without a key. Answers are aligned by their exact text, with each annotator's
+independently shuffled A–D labels preserved.
+
+<details>
+<summary>Create a new blinded annotation study</summary>
 
 The preserved [participant ZIPs](participant_apps/) can be opened without any
 installation or API key. Send only a participant ZIP, never this full repository
@@ -127,6 +150,8 @@ compares two final returns. The dual study preserves separate identities,
 independently randomized labels, finalization locks, post-submission feedback,
 and an offline organizer page. Ties, drafts, abstentions and missing returns
 remain distinct. Do not count synthetic tests as human evaluations.
+
+</details>
 
 ## Installation and validation
 

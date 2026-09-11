@@ -10,7 +10,7 @@ import zipfile
 ROOT=Path(__file__).resolve().parents[1]
 TOP=('.env.example','.gitignore','.gitattributes','.python-version','AGENTS.md','README.md',
      'THIRD_PARTY_NOTICES.md','CITATION.cff','pyproject.toml','package.json','package-lock.json','uv.lock')
-FOLDERS=('.github','docs','figures','participant_apps','scripts','src/legal_repro','tests')
+FOLDERS=('.github','docs','figures','human_evaluation','participant_apps','prompts','scripts','src/legal_repro','tests')
 
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--output',type=Path,required=True)
@@ -29,7 +29,7 @@ for path in sorted(set(paths)):
     if any(part in ('_prev','node_modules','.venv','outputs','review') for part in path.relative_to(ROOT).parts[:-1]) and not name.startswith('src/legal_repro/assets/ui/review/'):
         raise PermissionError('Excluded release tree')
     data=path.read_bytes()
-    if path.suffix in ('.py','.md','.txt','.json','.toml','.yml','.js','.cjs'):
+    if path.suffix in ('.py','.md','.txt','.json','.toml','.yml','.js','.cjs','.html','.csv'):
         # Check allowlisted publishable text only; never open a real credential file.
         if re.search(rb'(?:sk-or-v1-[A-Za-z0-9]{20,}|gh[pousr]_[A-Za-z0-9]{30,}|-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----)',data):
             raise PermissionError('Possible credential found in release path '+name)

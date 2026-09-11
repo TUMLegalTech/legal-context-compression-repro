@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-11",
+  "kind": "offline_annotation_and_prompt_release",
+  "base_commit": "37623e1dd2e443961172f1c283a4a9c29948c250",
+  "tests_passed": 134,
+  "test_warnings": 16,
+  "python": "3.12.11",
+  "original_assets_unchanged": 26,
+  "prompt_templates_verified": 7,
+  "published_human_questions": 100,
+  "published_human_judgments": 200,
+  "ranked_judgments": 196,
+  "ungradable_judgments": 4,
+  "jointly_ranked_questions": 96,
+  "human_artifacts_reproduced_byte_for_byte": true,
+  "human_artifact_sha256": {
+    "summary.json": "55665b96c2ecc69d651f3fe2d9ed92e227bb7851935e9d1ce7f5e792d1a1c23e",
+    "judgments.csv": "2649a9e7421003afad9daa311c9e6a0a5886637c08d5d7304409077fb8c5a725",
+    "index.html": "74c9ad0ec828ea66832fc5bc944794a60e1c3343af397950bba226a20d4adcf4"
+  },
+  "installed_wheel": {
+    "accepted": true,
+    "sha256": "2600d02b5d1270e674fa580ed8bc92ee49199c78024b6814f44473a019383016",
+    "network_blocked": true,
+    "source_code_and_key_file_reads_blocked": true,
+    "attempted_source_reads": [],
+    "full_plan": {
+      "conditions": 18,
+      "generation": 9468,
+      "questions": 526,
+      "rank": 8679,
+      "score": 10404,
+      "semantic_calls": 28551
+    }
+  },
+  "live_model_requests": 0,
+  "credentials_read": false
+}

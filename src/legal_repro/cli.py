@@ -17,6 +17,8 @@ def main():
     figures.add_argument('--output',type=Path,required=True)
     review=commands.add_parser('review',help='Build the complete offline reference viewer')
     review.add_argument('--output',type=Path,required=True)
+    human=commands.add_parser('human',help='Recompute published human agreement and build an offline report')
+    human.add_argument('--output',type=Path,required=True)
     for name in ('smoke','evaluate'):
         run=commands.add_parser(name,help='Hosted replication; requires an approved active contract')
         run.add_argument('--contract',type=Path)
@@ -48,6 +50,9 @@ def main():
             from .verification import verify
             from .review_bundle import build
             verify()
+            result=build(args.output)
+        elif args.command=='human':
+            from .human import build
             result=build(args.output)
         elif args.command in ('smoke','evaluate'):
             if args.dry_run:

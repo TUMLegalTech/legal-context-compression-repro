@@ -4,3 +4,4 @@
 /participant_apps/** -text
 *.gz -text
 *.zip -text
+human_evaluation/index.html -whitespace

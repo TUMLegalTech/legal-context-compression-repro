@@ -1,0 +1,30 @@
+JURISTISCHE ANTWORTBEWERTUNG
+
+1. ZIP-Datei zuerst vollständig entpacken (z. B. Rechtsklick > Alle extrahieren).
+2. Die entpackte index.html mit einem aktuellen Desktop-Webbrowser öffnen.
+   Keine Installation, kein Konto und keine Internetverbindung nötig.
+3. Je Fall Frage und Referenz lesen und die vier Antworten nach rechtlicher Qualität ordnen.
+   1 = beste Antwort. Gleiche Rangzahlen bedeuten Gleichstand.
+   Die Referenz ist keine fünfte Antwort. Bei Zweifeln an ihr den Hinweis setzen und erläutern.
+4. Bewertungen ausdrücklich bestätigen. Nicht beurteilbare Fälle benötigen eine Begründung.
+   Jede Auswahl wird sofort als Entwurf gespeichert; erst das Bestätigen schließt den Fall ab.
+   Der Speicherstatus zeigt, ob die Speicherung im Browser überprüft wurde.
+5. Vor jeder Pause auf 'Ergebnisse / Sicherung herunterladen' klicken. Die JSON-Datei aufbewahren.
+   Zum Fortsetzen index.html öffnen und ggf. über 'Sicherung laden' die letzte JSON-Datei wählen.
+6. Am Ende nochmals herunterladen und diese neueste JSON-Datei an die Studienleitung senden.
+   Nicht die HTML- oder ZIP-Datei zurücksenden: Sie enthalten Ihre Bewertungen nicht!
+
+Bitte den Download im Download-Ordner kontrollieren. Es erfolgt keine automatische Übertragung.
+Browser-Speicherung allein ist keine sichere Abgabe. Verwenden Sie keine privaten/Inkognito-Fenster.
+Bei einem Speicherfehler vor dem Wechsel zu einem anderen Fall eine JSON-Sicherung herunterladen.
+Nutzen Sie dieses Paket nur für die zugewiesene Person und nicht gleichzeitig in mehreren Tabs.
+
+ABSCHLUSS UND ÜBEREINSTIMMUNG
+Bewerten Sie unabhängig und ausschließlich relativ zur Referenz. Keine externen Quellen.
+Gleichstand bedeutet rechtlich gleichwertig, nicht Unsicherheit. Kurze Begründungen sind hilfreich.
+Nach allen Fällen: 'Endgültig abschließen & Übersicht anzeigen' wählen.
+Die Bewertungen werden gesperrt; erst danach erscheint Ihr Vergleich mit dem LLM.
+Die automatisch heruntergeladene FINAL_…json enthält alle Fragen, Antworten und Bewertungen.
+Diese FINAL-Datei an die Studienleitung senden. Den Download bitte kontrollieren.
+Nicht mit der anderen Person austauschen, bevor beide endgültig abgeschlossen haben.
+Keine Quelltextansicht nutzen: Der Offline-Abschlussmechanismus ist keine Verschlüsselung.

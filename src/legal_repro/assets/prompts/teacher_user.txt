@@ -1,0 +1,8 @@
+Trainingsfrage:
+{training_question}
+
+Trainingsreferenzantwort:
+{training_answer}
+
+Exakte Kontexteinheiten als JSON:
+{units_json}
